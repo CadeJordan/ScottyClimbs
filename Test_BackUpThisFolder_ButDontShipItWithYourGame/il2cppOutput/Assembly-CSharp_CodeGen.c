@@ -7,29 +7,101 @@
 
 
 
+extern void ObstacleSpawner_Update_m3266463E77433CD430E2B948372FABBC4E652D0B (void);
+extern void ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879095 (void);
+extern void ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94 (void);
+extern void ClimbingObstacle_Start_mB5C1E3FA3AA2FD793D72F5BBF26BB03E4A6D7247 (void);
+extern void ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4 (void);
+extern void ClimbingObstacle_OnCollisionEnter_mBF26C785C9227D56E6163304DE9604451362B7C5 (void);
+extern void ClimbingObstacle_GetCloserHand_mD66FE02064A140F701E300577A9F7A24D28856A3 (void);
+extern void ClimbingObstacle_DisableGrip_mB88ED7AAF6808382BCAB787B19D18BA66BB1A7EE (void);
+extern void ClimbingObstacle_TriggerHaptics_mCEE7944BE09DE337647677BF0E3DD518A03BE181 (void);
+extern void ClimbingObstacle__ctor_mF3E3300D10817D83427E2B3F92E33C037F3CFA40 (void);
+extern void U3CDisableGripU3Ed__9__ctor_m20AB1D6B803A62ECF2DBCF7E51124126C062E6E8 (void);
+extern void U3CDisableGripU3Ed__9_System_IDisposable_Dispose_m932C4B8B31CEB495B83D2CF1372E611684D14C8F (void);
+extern void U3CDisableGripU3Ed__9_MoveNext_m5AE801516FFB3BCB1786E4DD7A1BA494AAD39C9D (void);
+extern void U3CDisableGripU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB32BE2D0B4A4149117326673F4313CE5356964D (void);
+extern void U3CDisableGripU3Ed__9_System_Collections_IEnumerator_Reset_m081D37229D57F661E4AEEFA5135D993538EDC82A (void);
+extern void U3CDisableGripU3Ed__9_System_Collections_IEnumerator_get_Current_m16B224EB5978D323B6EE70433E5DA5E57D98C048 (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[4] = 
+extern void AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836 (void);
+extern void AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532 (void);
+extern void AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708 (void);
+extern void AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8 (void);
+extern void AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C (void);
+extern void AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE (void);
+extern void AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C (void);
+extern void AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4 (void);
+static Il2CppMethodPointer s_methodPointers[28] = 
 {
+	ObstacleSpawner_Update_m3266463E77433CD430E2B948372FABBC4E652D0B,
+	ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879095,
+	ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94,
+	ClimbingObstacle_Start_mB5C1E3FA3AA2FD793D72F5BBF26BB03E4A6D7247,
+	ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4,
+	ClimbingObstacle_OnCollisionEnter_mBF26C785C9227D56E6163304DE9604451362B7C5,
+	ClimbingObstacle_GetCloserHand_mD66FE02064A140F701E300577A9F7A24D28856A3,
+	ClimbingObstacle_DisableGrip_mB88ED7AAF6808382BCAB787B19D18BA66BB1A7EE,
+	ClimbingObstacle_TriggerHaptics_mCEE7944BE09DE337647677BF0E3DD518A03BE181,
+	ClimbingObstacle__ctor_mF3E3300D10817D83427E2B3F92E33C037F3CFA40,
+	U3CDisableGripU3Ed__9__ctor_m20AB1D6B803A62ECF2DBCF7E51124126C062E6E8,
+	U3CDisableGripU3Ed__9_System_IDisposable_Dispose_m932C4B8B31CEB495B83D2CF1372E611684D14C8F,
+	U3CDisableGripU3Ed__9_MoveNext_m5AE801516FFB3BCB1786E4DD7A1BA494AAD39C9D,
+	U3CDisableGripU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB32BE2D0B4A4149117326673F4313CE5356964D,
+	U3CDisableGripU3Ed__9_System_Collections_IEnumerator_Reset_m081D37229D57F661E4AEEFA5135D993538EDC82A,
+	U3CDisableGripU3Ed__9_System_Collections_IEnumerator_get_Current_m16B224EB5978D323B6EE70433E5DA5E57D98C048,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+	AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836,
+	AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532,
+	AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708,
+	AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8,
+	AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C,
+	AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE,
+	AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C,
+	AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4,
 };
-static const int32_t s_InvokerIndices[4] = 
+static const int32_t s_InvokerIndices[28] = 
 {
-	21070,
-	21070,
-	34527,
-	21070,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
+	16108,
+	14035,
+	6319,
+	16108,
+	21071,
+	16015,
+	21071,
+	20571,
+	20826,
+	21071,
+	20826,
+	21071,
+	21071,
+	34528,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	4,
+	28,
 	s_methodPointers,
 	0,
 	NULL,

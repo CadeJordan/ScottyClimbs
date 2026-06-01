@@ -346,6 +346,7 @@ UnityEngine.Animator::StringToHash_Injected
 UnityEngine.Animator::GetBoneTransformInternal_Injected
 UnityEngine.Animator::get_avatar_Injected
 UnityEngine.Animator::ResetTriggerString_Injected
+UnityEngine.Animator::SetBoolString_Injected
 UnityEngine.Animator::SetFloatID_Injected
 UnityEngine.Animator::SetFloatString_Injected
 UnityEngine.Animator::SetLayerWeight_Injected
@@ -967,6 +968,7 @@ UnityEngine.HumanTrait::GetBoneIndexFromMono
 UnityEngine.ImageConversion::LoadImage_Injected
 UnityEngine.ImageConversion::EncodeToJPG_Injected
 UnityEngine.ImageConversion::EncodeToPNG_Injected
+UnityEngine.Input::GetKeyDownInt
 UnityEngine.Input::GetKeyInt
 UnityEngine.Input::GetMouseButton
 UnityEngine.Input::GetMouseButtonDown
@@ -1427,6 +1429,7 @@ UnityEngine.Random::RandomRangeInt
 UnityEngine.Random::Range
 UnityEngine.Random::get_value
 UnityEngine.Random::InitState
+UnityEngine.Random::get_rotation_Injected
 UnityEngine.Random::get_state_Injected
 UnityEngine.Random::set_state_Injected
 UnityEngine.RectOffset::get_bottom_Injected
