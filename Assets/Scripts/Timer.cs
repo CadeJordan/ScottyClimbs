@@ -9,6 +9,9 @@ public class Timer : MonoBehaviour
     public int seconds = 0;
     public int milliseconds = 0;
     public TextMeshProUGUI timer;
+    public Collider targetTrigger;
+    private bool timerRunning = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,10 +21,22 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        minutes = (int)(time/60);
-        seconds = (int)(time%60);
-        milliseconds = (int)((time - Math.Floor(time))*1000);
-        timer.text = $"{minutes:00}:{seconds:00}:{milliseconds:000}";
+        if (timerRunning)
+        {
+            time += Time.deltaTime;
+            minutes = (int)(time/60);
+            seconds = (int)(time%60);
+            milliseconds = (int)((time - Math.Floor(time))*1000);
+            timer.text = $"{minutes:00}:{seconds:00}:{milliseconds:000}";
+        }
+    }
+
+    // Stop timer when entering the target trigger volume
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision == targetTrigger)
+        {
+            timerRunning = false;
+        }
     }
 }
