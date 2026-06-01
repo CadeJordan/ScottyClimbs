@@ -1,15 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.IO;
-
-[System.Serializable]
-public class BestTimeData
-{
-    public int minutes;
-    public int seconds;
-    public int milliseconds;
-    public float totalTime;
-}
+using static BestTimeData;
 
 public class BestTimeSetter : MonoBehaviour
 {

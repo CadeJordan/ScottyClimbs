@@ -1044,6 +1044,7 @@
           {
             "name": "BoxCollider",
             "scenes": [
+              "Assets/Scenes/Menu.unity",
               "Assets/Scenes/SampleScene.unity"
             ],
             "dependencyType": 0,

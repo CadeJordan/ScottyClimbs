@@ -26,6 +26,17 @@ struct VirtualActionInvoker2
 		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
 	}
 };
+template <typename R>
+struct VirtualFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
 template <typename R, typename T1, typename T2>
 struct VirtualFuncInvoker2
 {
@@ -161,6 +172,8 @@ struct Animator_t8A52E42AE54F76681838FE9E632683EF3952E883;
 struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20;
 struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299;
 struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA;
+struct BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304;
+struct BestTimeSetter_t91028E565F527E99015B311B01BDE7CA43247F35;
 struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
 struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26;
 struct CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860;
@@ -254,6 +267,8 @@ struct HapticImpulseChannel_t80F289E3894B24D7149F6C528A83326DC585B043;
 struct LogicalInputState_tC8869ADC07CFDF5E60D09DC140CC05EF0227843A;
 
 IL2CPP_EXTERN_C RuntimeClass* Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
@@ -264,25 +279,31 @@ IL2CPP_EXTERN_C RuntimeClass* U3CDisableGripU3Ed__10_t0BF4A10668B2B69258DEA352B7
 IL2CPP_EXTERN_C RuntimeClass* U3CDisableHandholdsU3Ed__11_t7583E1AB701E3F4162C8CD1C0EF368BBB7D6F4E7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____597AA92DA5E02E9207AABF35DFD0848535FCB37DCB0492A3AA0E7C8831DAD4C5_FieldInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____CC58E40A6DF2984D7806B1BD9B2B2E49A39C2AB7ED6B5F2425B9D8430DC3DFFC_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____24321B41C2EC28C4C3698B0D1AEF4D97C456ECE4671F8CB7C65A395A025A9156_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____3B3304C7A21C329451A548F1ACD452D1DF18BFB5770BD405C0B5407F82565DD5_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral0EA65C9441A28C30128B0D93C0CADB0A0BA30D71;
 IL2CPP_EXTERN_C String_t* _stringLiteral1AB844EEA01AD1C2DC78CC678A2F93643E6AAB2D;
+IL2CPP_EXTERN_C String_t* _stringLiteral1B0306F4566AC3EBF64E9DA8CEEEDE5926E962FE;
+IL2CPP_EXTERN_C String_t* _stringLiteral240B25E58FAA792B05766813F6A3446858BCEEDE;
+IL2CPP_EXTERN_C String_t* _stringLiteral243EA1E2D631C322E265497BC6B51886D7F554AA;
 IL2CPP_EXTERN_C String_t* _stringLiteral28AC5332EA304122ABA82CE8320DA9A7F85637E1;
+IL2CPP_EXTERN_C String_t* _stringLiteral36E3C689C32F77AA7409A148D2EEF303AB09D64D;
 IL2CPP_EXTERN_C String_t* _stringLiteral476F8B22CDA839C0424707231C37B9BBD532AB4F;
-IL2CPP_EXTERN_C String_t* _stringLiteral5D4D4FF2AE19F91B6D54642FBD372705B11F2F37;
+IL2CPP_EXTERN_C String_t* _stringLiteral65759D66C34B726892049631F0B42419EC8F8404;
 IL2CPP_EXTERN_C String_t* _stringLiteral837E46E94787C946AA530A1961AEAC70B097F481;
 IL2CPP_EXTERN_C String_t* _stringLiteral85089F3F12DC94CDA59B8ADE7AFA51B059D55006;
 IL2CPP_EXTERN_C String_t* _stringLiteral8739227E8E687EF781DA0D923452C2686CFF10A2;
-IL2CPP_EXTERN_C String_t* _stringLiteralA7DFE5D3DDB902C83E9C78A4A2E3AAEE9BFC9D5B;
+IL2CPP_EXTERN_C String_t* _stringLiteral960EA570A53E98EBB2A98D2ED8FDA7040BC587E7;
 IL2CPP_EXTERN_C String_t* _stringLiteralB1BF1E9CEE2007E2993FE1E3A9CFB08EC1B05EC6;
 IL2CPP_EXTERN_C String_t* _stringLiteralB1E5119D36EC43B340C0A0DDC99F1156546EA9DF;
 IL2CPP_EXTERN_C String_t* _stringLiteralCAF8804297181FF007CA835529DD4477CFD94A70;
 IL2CPP_EXTERN_C String_t* _stringLiteralDB4D83D6871102EE8099E4F8AF38EB3DFE88EB6B;
+IL2CPP_EXTERN_C String_t* _stringLiteralE5D9EFAEE02F17A00C8DEDB8BBCD3FE2A5ECD695;
+IL2CPP_EXTERN_C String_t* _stringLiteralEC4E5F9EF4FFB78AE1E7393EC0ED1580CA8284CA;
 IL2CPP_EXTERN_C String_t* _stringLiteralED3EDDE08603F6B8A7475B082385FE302279A8D9;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInParent_TisActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68_m7DBEE424278D005EB644537712FABBD7EDF26367_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F_mFADAE9AFCF772FDA71EE8C1B1E31C46072A4E9C0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m2D7F86C77ECF9B82AAC077B511F1004280571B90_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsByType_TisXRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826_mE83CA03E5A18B71AC0E4C60E5E4D517AF51527FA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* StartGameScript_OnButtonPress_m92BE09CB813974975CD0E45B9A80F06A26D2A407_RuntimeMethod_var;
@@ -309,6 +330,13 @@ struct U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA  : public RuntimeObject
 {
+};
+struct BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304  : public RuntimeObject
+{
+	int32_t ___minutes;
+	int32_t ___seconds;
+	int32_t ___milliseconds;
+	float ___totalTime;
 };
 struct String_t  : public RuntimeObject
 {
@@ -686,7 +714,7 @@ struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_com : 
 	float ___m_Seconds;
 };
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D106_tFC6E8EC44FEAFF967FD659AA869A228D571C46CC 
+struct __StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82 
 {
 	union
 	{
@@ -696,12 +724,12 @@ struct __StaticArrayInitTypeSizeU3D106_tFC6E8EC44FEAFF967FD659AA869A228D571C46CC
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D106_tFC6E8EC44FEAFF967FD659AA869A228D571C46CC__padding[106];
+		uint8_t __StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82__padding[144];
 	};
 };
 #pragma pack(pop, tp)
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D195_t20568F5212B506C670BA84ABF718C10815D83C19 
+struct __StaticArrayInitTypeSizeU3D236_t53CC9B5E3726BBABB1809ECB4B4E88BE60D647C0 
 {
 	union
 	{
@@ -711,7 +739,7 @@ struct __StaticArrayInitTypeSizeU3D195_t20568F5212B506C670BA84ABF718C10815D83C19
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D195_t20568F5212B506C670BA84ABF718C10815D83C19__padding[195];
+		uint8_t __StaticArrayInitTypeSizeU3D236_t53CC9B5E3726BBABB1809ECB4B4E88BE60D647C0__padding[236];
 	};
 };
 #pragma pack(pop, tp)
@@ -1511,6 +1539,12 @@ struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71  : public Behavio
 {
 	CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* ___m_CancellationTokenSource;
 };
+struct BestTimeSetter_t91028E565F527E99015B311B01BDE7CA43247F35  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___bestTimeDisplay;
+	String_t* ___bestTimeFilePath;
+	BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* ___bestTimeData;
+};
 struct ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* ___leftHandInteractor;
@@ -1518,7 +1552,7 @@ struct ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F  : public Mono
 	float ___gripDisableDuration;
 	float ___hapticIntensity;
 	float ___hapticDuration;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Handholds;
+	ClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F* ___handholds;
 };
 struct ObstacleSpawner_t447F43700055F1200E1A194844B011876E7362FC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1547,6 +1581,8 @@ struct Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20  : public MonoBehaviour_t
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___timer;
 	Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___targetTrigger;
 	bool ___timerRunning;
+	String_t* ___bestTimeFilePath;
+	BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* ___bestTimeData;
 };
 struct UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -2126,8 +2162,8 @@ struct TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957  : public TMP_T
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
-	__StaticArrayInitTypeSizeU3D106_tFC6E8EC44FEAFF967FD659AA869A228D571C46CC ___597AA92DA5E02E9207AABF35DFD0848535FCB37DCB0492A3AA0E7C8831DAD4C5;
-	__StaticArrayInitTypeSizeU3D195_t20568F5212B506C670BA84ABF718C10815D83C19 ___CC58E40A6DF2984D7806B1BD9B2B2E49A39C2AB7ED6B5F2425B9D8430DC3DFFC;
+	__StaticArrayInitTypeSizeU3D236_t53CC9B5E3726BBABB1809ECB4B4E88BE60D647C0 ___24321B41C2EC28C4C3698B0D1AEF4D97C456ECE4671F8CB7C65A395A025A9156;
+	__StaticArrayInitTypeSizeU3D144_t4839144B438E5DCF848D2BCCA695C05728CB3D82 ___3B3304C7A21C329451A548F1ACD452D1DF18BFB5770BD405C0B5407F82565DD5;
 };
 struct String_t_StaticFields
 {
@@ -2329,12 +2365,26 @@ struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArr
 };
 
 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared (String_t* ___0_json, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_m249A6BA4F2F19C2D3CE217D4D31847DF0EF03EFE_gshared (RuntimeObject* ___0_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Object_FindObjectsByType_TisRuntimeObject_m9F3B83321CD4E4F4F764805ADCEF338CF2BA8409_gshared (int32_t ___0_sortMode, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponentInParent_TisRuntimeObject_m6746D6BB99912B1B509746C993906492F86CD119_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57_gshared (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BestTimeSetter_LoadAndDisplayBestTime_mF78B47A9C2962A9ECD6BC524F61E57779B0B3742 (BestTimeSetter_t91028E565F527E99015B311B01BDE7CA43247F35* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A (String_t* ___0_path, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA (String_t* ___0_path, const RuntimeMethod* method) ;
+inline BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A (String_t* ___0_json, const RuntimeMethod* method)
+{
+	return ((  BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared)(___0_json, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, RuntimeObject* ___3_arg2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879095 (ObstacleSpawner_t447F43700055F1200E1A194844B011876E7362FC* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
@@ -2350,23 +2400,18 @@ inline Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* GameObject_GetCompon
 {
 	return ((  Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_down_mF62B2AE7C5AC31EAC9CB62797C7190C90A7A8599_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494 (float ___0_minInclusive, float ___1_maxInclusive, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_m064F2A066491D2DC4FFCFBDBE5FCFFB807A04436 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, float ___1_t, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4 (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___0_format, RuntimeObject* ___1_arg0, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 inline XRDirectInteractorU5BU5D_tF6A7F16770B239DE38E5E4C0C2C4749CFE7836CC* Object_FindObjectsByType_TisXRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826_mE83CA03E5A18B71AC0E4C60E5E4D517AF51527FA (int32_t ___0_sortMode, const RuntimeMethod* method)
 {
 	return ((  XRDirectInteractorU5BU5D_tF6A7F16770B239DE38E5E4C0C2C4749CFE7836CC* (*) (int32_t, const RuntimeMethod*))Object_FindObjectsByType_TisRuntimeObject_m9F3B83321CD4E4F4F764805ADCEF338CF2BA8409_gshared)(___0_sortMode, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_ToLower_m6191ABA3DC514ED47C10BDA23FD0DDCEAE7ACFBD (String_t* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Contains_m6D77B121FADA7CA5F397C0FABB65DA62DF03B6C3 (String_t* __this, String_t* ___0_value, const RuntimeMethod* method) ;
@@ -2389,10 +2434,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XRBaseInteractor_g
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* __this, float ___0_seconds, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
-inline ClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F* GameObject_GetComponent_TisClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F_mFADAE9AFCF772FDA71EE8C1B1E31C46072A4E9C0 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
-{
-	return ((  ClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
-}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* InputActionReference_get_action_m395EDEA6A93B54555D22323FDA6E1B1E931CE6EF (InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* __this, const RuntimeMethod* method) ;
 inline void Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57 (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
 {
@@ -2401,7 +2442,11 @@ inline void Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57 (Action_1_t
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputAction_add_performed_m0337FFA16EBEF7AE365C3B558CFDFF7BB9747B54 (InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* __this, Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputAction_remove_performed_m1BE84CED38F11F17C825FA782B35C92D708E6E44 (InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* __this, Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E (String_t* ___0_sceneName, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, RuntimeObject* ___3_arg2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_LoadBestTime_mA095A498758C62633740214C95C642E6251F40BD (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_SaveBestTime_m3003C2BDBBF22DD4C550FEC434A56CBFB62E6F97 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BestTimeData__ctor_m8C6B0D4CDE72DB25408224370D7BAE165CB36D73 (BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JsonUtility_ToJson_m53A1FEE0D388CF3A629E093C04B5E1A6D5463B53 (RuntimeObject* ___0_obj, bool ___1_prettyPrint, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void File_WriteAllText_m8AE8932A417928EF1E86F1E6B37C7A41904614D1 (String_t* ___0_path, String_t* ___1_contents, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
 #ifdef __clang__
@@ -2417,7 +2462,162 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129264
+// Method Definition Index: 129267
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BestTimeSetter_Start_m8A52B82FC9480320DF0431030CAC41CDC8C40D2F (BestTimeSetter_t91028E565F527E99015B311B01BDE7CA43247F35* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral240B25E58FAA792B05766813F6A3446858BCEEDE);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:15>
+		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399(NULL);
+		String_t* L_1;
+		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_0, _stringLiteral240B25E58FAA792B05766813F6A3446858BCEEDE, NULL);
+		__this->___bestTimeFilePath = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeFilePath), (void*)L_1);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:16>
+		BestTimeSetter_LoadAndDisplayBestTime_mF78B47A9C2962A9ECD6BC524F61E57779B0B3742(__this, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:17>
+		return;
+	}
+}
+// Method Definition Index: 129268
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BestTimeSetter_LoadAndDisplayBestTime_mF78B47A9C2962A9ECD6BC524F61E57779B0B3742 (BestTimeSetter_t91028E565F527E99015B311B01BDE7CA43247F35* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral243EA1E2D631C322E265497BC6B51886D7F554AA);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral960EA570A53E98EBB2A98D2ED8FDA7040BC587E7);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEC4E5F9EF4FFB78AE1E7393EC0ED1580CA8284CA);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralED3EDDE08603F6B8A7475B082385FE302279A8D9);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:21>
+		String_t* L_0 = __this->___bestTimeFilePath;
+		bool L_1;
+		L_1 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0099;
+		}
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:23>
+		String_t* L_2 = __this->___bestTimeFilePath;
+		String_t* L_3;
+		L_3 = File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA(L_2, NULL);
+		V_0 = L_3;
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:24>
+		String_t* L_4 = V_0;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_5;
+		L_5 = JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A(L_4, JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A_RuntimeMethod_var);
+		__this->___bestTimeData = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeData), (void*)L_5);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:25>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = __this->___bestTimeDisplay;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_7;
+		L_7 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_7)
+		{
+			goto IL_00c1;
+		}
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:27>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_8 = __this->___bestTimeDisplay;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_9 = __this->___bestTimeData;
+		NullCheck(L_9);
+		int32_t L_10 = L_9->___minutes;
+		int32_t L_11 = L_10;
+		RuntimeObject* L_12 = Box(il2cpp_defaults.int32_class, &L_11);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_13 = __this->___bestTimeData;
+		NullCheck(L_13);
+		int32_t L_14 = L_13->___seconds;
+		int32_t L_15 = L_14;
+		RuntimeObject* L_16 = Box(il2cpp_defaults.int32_class, &L_15);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_17 = __this->___bestTimeData;
+		NullCheck(L_17);
+		int32_t L_18 = L_17->___milliseconds;
+		int32_t L_19 = L_18;
+		RuntimeObject* L_20 = Box(il2cpp_defaults.int32_class, &L_19);
+		String_t* L_21;
+		L_21 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralED3EDDE08603F6B8A7475B082385FE302279A8D9, L_12, L_16, L_20, NULL);
+		NullCheck(L_8);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_8, L_21);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:28>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_22 = __this->___bestTimeDisplay;
+		NullCheck(L_22);
+		String_t* L_23;
+		L_23 = VirtualFuncInvoker0< String_t* >::Invoke(65, L_22);
+		String_t* L_24;
+		L_24 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral243EA1E2D631C322E265497BC6B51886D7F554AA, L_23, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_24, NULL);
+		return;
+	}
+
+IL_0099:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:33>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_25 = __this->___bestTimeDisplay;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_26;
+		L_26 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_25, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_26)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:35>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_27 = __this->___bestTimeDisplay;
+		NullCheck(L_27);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_27, _stringLiteralEC4E5F9EF4FFB78AE1E7393EC0ED1580CA8284CA);
+	}
+
+IL_00b7:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:37>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral960EA570A53E98EBB2A98D2ED8FDA7040BC587E7, NULL);
+	}
+
+IL_00c1:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/BestTimeSetter.cs:39>
+		return;
+	}
+}
+// Method Definition Index: 129269
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BestTimeSetter__ctor_mF2445EB40FAB3C234E724742A81FC5609F9F1038 (BestTimeSetter_t91028E565F527E99015B311B01BDE7CA43247F35* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 129270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObstacleSpawner_Update_m3266463E77433CD430E2B948372FABBC4E652D0B (ObstacleSpawner_t447F43700055F1200E1A194844B011876E7362FC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2447,7 +2647,7 @@ IL_0031:
 		return;
 	}
 }
-// Method Definition Index: 129265
+// Method Definition Index: 129271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879095 (ObstacleSpawner_t447F43700055F1200E1A194844B011876E7362FC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2526,7 +2726,7 @@ IL_0059:
 		return;
 	}
 }
-// Method Definition Index: 129266
+// Method Definition Index: 129272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ObstacleSpawner_GetEdge_m1C5209BB60DD42A917EFDFC19FD180B03746B206 (ObstacleSpawner_t447F43700055F1200E1A194844B011876E7362FC* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -2627,7 +2827,7 @@ IL_00b5:
 		return L_19;
 	}
 }
-// Method Definition Index: 129267
+// Method Definition Index: 129273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94 (ObstacleSpawner_t447F43700055F1200E1A194844B011876E7362FC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2655,36 +2855,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129268
+// Method Definition Index: 129274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle_Start_mB5C1E3FA3AA2FD793D72F5BBF26BB03E4A6D7247 (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5D4D4FF2AE19F91B6D54642FBD372705B11F2F37);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA7DFE5D3DDB902C83E9C78A4A2E3AAEE9BFC9D5B);
-		s_Il2CppMethodInitialized = true;
-	}
 	{
 		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:17>
 		ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4(__this, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:18>
-		XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* L_0 = __this->___leftHandInteractor;
-		String_t* L_1;
-		L_1 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralA7DFE5D3DDB902C83E9C78A4A2E3AAEE9BFC9D5B, L_0, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_1, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:19>
-		XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* L_2 = __this->___rightHandInteractor;
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral5D4D4FF2AE19F91B6D54642FBD372705B11F2F37, L_2, NULL);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
 		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 129269
+// Method Definition Index: 129275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4 (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2803,7 +2984,7 @@ IL_005f:
 		return;
 	}
 }
-// Method Definition Index: 129270
+// Method Definition Index: 129276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle_OnCollisionEnter_mBF26C785C9227D56E6163304DE9604451362B7C5 (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* ___0_collision, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2852,7 +3033,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 129271
+// Method Definition Index: 129277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* ClimbingObstacle_GetCloserHand_mD66FE02064A140F701E300577A9F7A24D28856A3 (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_point, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2940,7 +3121,7 @@ IL_0061:
 		return L_18;
 	}
 }
-// Method Definition Index: 129272
+// Method Definition Index: 129278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ClimbingObstacle_DisableGrip_mB88ED7AAF6808382BCAB787B19D18BA66BB1A7EE (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* ___0_hand, float ___1_duration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2964,7 +3145,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ClimbingObstacle_DisableGrip_m
 		return L_3;
 	}
 }
-// Method Definition Index: 129273
+// Method Definition Index: 129279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ClimbingObstacle_DisableHandholds_mAC168227BCF1196BEE761D6CF104F92B156863DF (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, float ___0_duration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2987,7 +3168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ClimbingObstacle_DisableHandho
 		return L_2;
 	}
 }
-// Method Definition Index: 129274
+// Method Definition Index: 129280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle_TriggerHaptics_mCEE7944BE09DE337647677BF0E3DD518A03BE181 (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* ___0_hand, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2999,7 +3180,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle_TriggerHaptics_mCEE7944
 	}
 	ActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68* V_0 = NULL;
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:94>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:98>
 		XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* L_0 = ___0_hand;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3010,19 +3191,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle_TriggerHaptics_mCEE7944
 		}
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:94>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:98>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:95>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:99>
 		XRDirectInteractor_t05C0D7BB2EA567834A88D4078A3F3730A607D826* L_2 = ___0_hand;
 		NullCheck(L_2);
 		ActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68* L_3;
 		L_3 = Component_GetComponentInParent_TisActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68_m7DBEE424278D005EB644537712FABBD7EDF26367(L_2, Component_GetComponentInParent_TisActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68_m7DBEE424278D005EB644537712FABBD7EDF26367_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:96>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:100>
 		ActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -3033,7 +3214,7 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:97>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:101>
 		ActionBasedController_tB9D8E7E013191571EA5507EA68057414B6969A68* L_6 = V_0;
 		float L_7 = __this->___hapticIntensity;
 		float L_8 = __this->___hapticDuration;
@@ -3044,19 +3225,19 @@ IL_000a:
 
 IL_002d:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:98>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:102>
 		return;
 	}
 }
-// Method Definition Index: 129275
+// Method Definition Index: 129281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle__ctor_mF3E3300D10817D83427E2B3F92E33C037F3CFA40 (ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:10>
-		__this->___gripDisableDuration = (1.5f);
 		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:11>
-		__this->___hapticIntensity = (0.800000012f);
+		__this->___gripDisableDuration = (1.5f);
 		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:12>
+		__this->___hapticIntensity = (0.800000012f);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:13>
 		__this->___hapticDuration = (0.300000012f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -3070,7 +3251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ClimbingObstacle__ctor_mF3E3300D10817D83
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129276
+// Method Definition Index: 129282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableGripU3Ed__10__ctor_mDD093D16200FC7E9B925569198A34E0500823DD1 (U3CDisableGripU3Ed__10_t0BF4A10668B2B69258DEA352B7DCCDEA0F2AC1B0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -3080,14 +3261,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableGripU3Ed__10__ctor_mDD093D1620
 		return;
 	}
 }
-// Method Definition Index: 129277
+// Method Definition Index: 129283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableGripU3Ed__10_System_IDisposable_Dispose_m52BBDECAD22C61A4AE9D027BEA4B629E7CE14A6D (U3CDisableGripU3Ed__10_t0BF4A10668B2B69258DEA352B7DCCDEA0F2AC1B0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 129278
+// Method Definition Index: 129284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDisableGripU3Ed__10_MoveNext_m44B6A38FA78D95872E7D5BC4E873035579DD86B9 (U3CDisableGripU3Ed__10_t0BF4A10668B2B69258DEA352B7DCCDEA0F2AC1B0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3185,7 +3366,7 @@ IL_007f:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 129279
+// Method Definition Index: 129285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableGripU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m12C32F732FF4375ECB65E2AE6BDC661D0851475C (U3CDisableGripU3Ed__10_t0BF4A10668B2B69258DEA352B7DCCDEA0F2AC1B0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3193,7 +3374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableGripU3Ed__10_System_
 		return L_0;
 	}
 }
-// Method Definition Index: 129280
+// Method Definition Index: 129286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableGripU3Ed__10_System_Collections_IEnumerator_Reset_m78F355A19A9CF96F92153E61B2059FC05371C758 (U3CDisableGripU3Ed__10_t0BF4A10668B2B69258DEA352B7DCCDEA0F2AC1B0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3202,7 +3383,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableGripU3Ed__10_System_Collection
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDisableGripU3Ed__10_System_Collections_IEnumerator_Reset_m78F355A19A9CF96F92153E61B2059FC05371C758_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 129281
+// Method Definition Index: 129287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableGripU3Ed__10_System_Collections_IEnumerator_get_Current_m5C62BDF7D0828B041EF9AF68095A47537BA65DB1 (U3CDisableGripU3Ed__10_t0BF4A10668B2B69258DEA352B7DCCDEA0F2AC1B0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3218,7 +3399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableGripU3Ed__10_System_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129282
+// Method Definition Index: 129288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableHandholdsU3Ed__11__ctor_m609D8AB53E2B0BE37DBBDA0786CFF820D9779C6E (U3CDisableHandholdsU3Ed__11_t7583E1AB701E3F4162C8CD1C0EF368BBB7D6F4E7* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -3228,23 +3409,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableHandholdsU3Ed__11__ctor_m609D8
 		return;
 	}
 }
-// Method Definition Index: 129283
+// Method Definition Index: 129289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableHandholdsU3Ed__11_System_IDisposable_Dispose_m5FDB1AB0159B1A4DDEA37F647078EE1867E0226A (U3CDisableHandholdsU3Ed__11_t7583E1AB701E3F4162C8CD1C0EF368BBB7D6F4E7* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 129284
+// Method Definition Index: 129290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDisableHandholdsU3Ed__11_MoveNext_mAF971276FD395F945B8485B872BF10720FF5E9C9 (U3CDisableHandholdsU3Ed__11_t7583E1AB701E3F4162C8CD1C0EF368BBB7D6F4E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F_mFADAE9AFCF772FDA71EE8C1B1E31C46072A4E9C0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral28AC5332EA304122ABA82CE8320DA9A7F85637E1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral65759D66C34B726892049631F0B42419EC8F8404);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral85089F3F12DC94CDA59B8ADE7AFA51B059D55006);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -3265,7 +3446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDisableHandholdsU3Ed__11_MoveNext_mAF
 		int32_t L_3 = V_0;
 		if ((((int32_t)L_3) == ((int32_t)1)))
 		{
-			goto IL_0053;
+			goto IL_0058;
 		}
 	}
 	{
@@ -3276,47 +3457,43 @@ IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
 		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:85>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral65759D66C34B726892049631F0B42419EC8F8404, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:87>
 		ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* L_4 = V_1;
 		NullCheck(L_4);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = L_4->___Handholds;
+		ClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F* L_5 = L_4->___handholds;
 		NullCheck(L_5);
-		ClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F* L_6;
-		L_6 = GameObject_GetComponent_TisClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F_mFADAE9AFCF772FDA71EE8C1B1E31C46072A4E9C0(L_5, GameObject_GetComponent_TisClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F_mFADAE9AFCF772FDA71EE8C1B1E31C46072A4E9C0_RuntimeMethod_var);
-		NullCheck(L_6);
-		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_6, (bool)0, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:86>
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_5, (bool)0, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:88>
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral28AC5332EA304122ABA82CE8320DA9A7F85637E1, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:87>
-		float L_7 = __this->___duration;
-		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_8 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_8, L_7, NULL);
-		__this->___U3CU3E2__current = L_8;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_8);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:90>
+		float L_6 = __this->___duration;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_7 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_7, L_6, NULL);
+		__this->___U3CU3E2__current = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_7);
 		__this->___U3CU3E1__state = 1;
 		return (bool)1;
 	}
 
-IL_0053:
+IL_0058:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:88>
-		ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* L_9 = V_1;
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:92>
+		ClimbingObstacle_t86DBA68BF3B58F4B86F4E82C1E521053D64F7E9F* L_8 = V_1;
+		NullCheck(L_8);
+		ClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F* L_9 = L_8->___handholds;
 		NullCheck(L_9);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = L_9->___Handholds;
-		NullCheck(L_10);
-		ClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F* L_11;
-		L_11 = GameObject_GetComponent_TisClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F_mFADAE9AFCF772FDA71EE8C1B1E31C46072A4E9C0(L_10, GameObject_GetComponent_TisClimbInteractable_t09D1D84B26AAD596EFBA96B7DB2F77F49994974F_mFADAE9AFCF772FDA71EE8C1B1E31C46072A4E9C0_RuntimeMethod_var);
-		NullCheck(L_11);
-		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_11, (bool)1, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:89>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_9, (bool)1, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:93>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral85089F3F12DC94CDA59B8ADE7AFA51B059D55006, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:90>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Obstacle.cs:94>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 129285
+// Method Definition Index: 129291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableHandholdsU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCDB9377FCF38F779BBD03533312198505FD66EF0 (U3CDisableHandholdsU3Ed__11_t7583E1AB701E3F4162C8CD1C0EF368BBB7D6F4E7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3324,7 +3501,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableHandholdsU3Ed__11_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 129286
+// Method Definition Index: 129292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableHandholdsU3Ed__11_System_Collections_IEnumerator_Reset_mC39247617F5D1ABE8896EF6ED162A778B6035720 (U3CDisableHandholdsU3Ed__11_t7583E1AB701E3F4162C8CD1C0EF368BBB7D6F4E7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3333,7 +3510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDisableHandholdsU3Ed__11_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDisableHandholdsU3Ed__11_System_Collections_IEnumerator_Reset_mC39247617F5D1ABE8896EF6ED162A778B6035720_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 129287
+// Method Definition Index: 129293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableHandholdsU3Ed__11_System_Collections_IEnumerator_get_Current_mBED64F75E4805825D53361AFCA2F1B6630ABF168 (U3CDisableHandholdsU3Ed__11_t7583E1AB701E3F4162C8CD1C0EF368BBB7D6F4E7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3349,7 +3526,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDisableHandholdsU3Ed__11_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129288
+// Method Definition Index: 129294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_Start_m59BABC6D8AF73273B3AAAAEC086A9C01116393CC (StartGameScript_tA15B0AF24FFD2A3B74A0F0E9D60C11C3988CB279* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3357,7 +3534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_Start_m59BABC6D8AF73273B
 		return;
 	}
 }
-// Method Definition Index: 129289
+// Method Definition Index: 129295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_OnEnable_m1B742E1D88C1CF1FCFC280FF08C4179857C3F8B6 (StartGameScript_tA15B0AF24FFD2A3B74A0F0E9D60C11C3988CB279* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3407,7 +3584,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 129290
+// Method Definition Index: 129296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_OnDisable_mDEB81C99A8033607EDFFEFEE9BB4C1A363FD6994 (StartGameScript_tA15B0AF24FFD2A3B74A0F0E9D60C11C3988CB279* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3457,7 +3634,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 129291
+// Method Definition Index: 129297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_Update_mB7A8E9D2FBA75D2A19F5CA03226F68C3D2677B83 (StartGameScript_tA15B0AF24FFD2A3B74A0F0E9D60C11C3988CB279* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3465,7 +3642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_Update_mB7A8E9D2FBA75D2A
 		return;
 	}
 }
-// Method Definition Index: 129292
+// Method Definition Index: 129298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_OnButtonPress_m92BE09CB813974975CD0E45B9A80F06A26D2A407 (StartGameScript_tA15B0AF24FFD2A3B74A0F0E9D60C11C3988CB279* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3485,7 +3662,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript_OnButtonPress_m92BE09CB8
 		return;
 	}
 }
-// Method Definition Index: 129293
+// Method Definition Index: 129299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript__ctor_m1B5763567738892E49446C7720C1DFBB22B09E03 (StartGameScript_tA15B0AF24FFD2A3B74A0F0E9D60C11C3988CB279* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3501,15 +3678,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StartGameScript__ctor_m1B5763567738892E4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129294
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Start_m6820D211A06B2E5E24795D7EBE67EE865F39BC43 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
+// Method Definition Index: 129300
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BestTimeData__ctor_m8C6B0D4CDE72DB25408224370D7BAE165CB36D73 (BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:19>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 129295
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 129301
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Start_m6820D211A06B2E5E24795D7EBE67EE865F39BC43 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral240B25E58FAA792B05766813F6A3446858BCEEDE);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:32>
+		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399(NULL);
+		String_t* L_1;
+		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_0, _stringLiteral240B25E58FAA792B05766813F6A3446858BCEEDE, NULL);
+		__this->___bestTimeFilePath = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeFilePath), (void*)L_1);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:33>
+		Timer_LoadBestTime_mA095A498758C62633740214C95C642E6251F40BD(__this, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:34>
+		return;
+	}
+}
+// Method Definition Index: 129302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE179212E71E6B2CD (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3520,7 +3730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:24>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:39>
 		bool L_0 = __this->___timerRunning;
 		if (!L_0)
 		{
@@ -3528,25 +3738,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE1
 		}
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:26>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:41>
 		float L_1 = __this->___time;
 		float L_2;
 		L_2 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___time = ((float)il2cpp_codegen_add(L_1, L_2));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:27>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:42>
 		float L_3 = __this->___time;
 		__this->___minutes = il2cpp_codegen_cast_double_to_int<int32_t>(((float)(L_3/(60.0f))));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:28>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:43>
 		float L_4 = __this->___time;
 		__this->___seconds = il2cpp_codegen_cast_double_to_int<int32_t>((fmodf(L_4, (60.0f))));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:29>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:44>
 		float L_5 = __this->___time;
 		float L_6 = __this->___time;
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		double L_7;
 		L_7 = floor(((double)L_6));
 		__this->___milliseconds = il2cpp_codegen_cast_double_to_int<int32_t>(((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract(((double)L_5), L_7)), (1000.0))));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:30>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:45>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_8 = __this->___timer;
 		int32_t L_9 = __this->___minutes;
 		int32_t L_10 = L_9;
@@ -3565,11 +3775,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE1
 
 IL_009e:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:32>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:47>
 		return;
 	}
 }
-// Method Definition Index: 129296
+// Method Definition Index: 129303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnTriggerEnter_m51FFA5AF7B08012AAEF3B5D487BA3D5F4AB207D0 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_collision, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3579,7 +3789,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnTriggerEnter_m51FFA5AF7B08012AAE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:37>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:52>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_collision;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_1 = __this->___targetTrigger;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -3587,25 +3797,209 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnTriggerEnter_m51FFA5AF7B08012AAE
 		L_2 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, L_1, NULL);
 		if (!L_2)
 		{
-			goto IL_0015;
+			goto IL_001b;
 		}
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:39>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:54>
 		__this->___timerRunning = (bool)0;
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:55>
+		Timer_SaveBestTime_m3003C2BDBBF22DD4C550FEC434A56CBFB62E6F97(__this, NULL);
 	}
 
-IL_0015:
+IL_001b:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:41>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 129297
+// Method Definition Index: 129304
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_LoadBestTime_mA095A498758C62633740214C95C642E6251F40BD (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral36E3C689C32F77AA7409A148D2EEF303AB09D64D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE5D9EFAEE02F17A00C8DEDB8BBCD3FE2A5ECD695);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:61>
+		String_t* L_0 = __this->___bestTimeFilePath;
+		bool L_1;
+		L_1 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:63>
+		String_t* L_2 = __this->___bestTimeFilePath;
+		String_t* L_3;
+		L_3 = File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA(L_2, NULL);
+		V_0 = L_3;
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:64>
+		String_t* L_4 = V_0;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_5;
+		L_5 = JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A(L_4, JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A_RuntimeMethod_var);
+		__this->___bestTimeData = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeData), (void*)L_5);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:65>
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_6 = __this->___bestTimeData;
+		NullCheck(L_6);
+		int32_t L_7 = L_6->___minutes;
+		int32_t L_8 = L_7;
+		RuntimeObject* L_9 = Box(il2cpp_defaults.int32_class, &L_8);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_10 = __this->___bestTimeData;
+		NullCheck(L_10);
+		int32_t L_11 = L_10->___seconds;
+		int32_t L_12 = L_11;
+		RuntimeObject* L_13 = Box(il2cpp_defaults.int32_class, &L_12);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_14 = __this->___bestTimeData;
+		NullCheck(L_14);
+		int32_t L_15 = L_14->___milliseconds;
+		int32_t L_16 = L_15;
+		RuntimeObject* L_17 = Box(il2cpp_defaults.int32_class, &L_16);
+		String_t* L_18;
+		L_18 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral36E3C689C32F77AA7409A148D2EEF303AB09D64D, L_9, L_13, L_17, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_18, NULL);
+		return;
+	}
+
+IL_0065:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:69>
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_19 = (BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304*)il2cpp_codegen_object_new(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_il2cpp_TypeInfo_var);
+		BestTimeData__ctor_m8C6B0D4CDE72DB25408224370D7BAE165CB36D73(L_19, NULL);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_20 = L_19;
+		NullCheck(L_20);
+		L_20->___minutes = 0;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_21 = L_20;
+		NullCheck(L_21);
+		L_21->___seconds = 0;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_22 = L_21;
+		NullCheck(L_22);
+		L_22->___milliseconds = 0;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_23 = L_22;
+		NullCheck(L_23);
+		L_23->___totalTime = ((std::numeric_limits<float>::max)());
+		__this->___bestTimeData = L_23;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeData), (void*)L_23);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:70>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE5D9EFAEE02F17A00C8DEDB8BBCD3FE2A5ECD695, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:72>
+		return;
+	}
+}
+// Method Definition Index: 129305
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_SaveBestTime_m3003C2BDBBF22DD4C550FEC434A56CBFB62E6F97 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1B0306F4566AC3EBF64E9DA8CEEEDE5926E962FE);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:76>
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_0 = __this->___bestTimeData;
+		if (!L_0)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		float L_1 = __this->___time;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_2 = __this->___bestTimeData;
+		NullCheck(L_2);
+		float L_3 = L_2->___totalTime;
+		if ((!(((float)L_1) < ((float)L_3))))
+		{
+			goto IL_00b1;
+		}
+	}
+
+IL_001e:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:78>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:79>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:80>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:81>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:82>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:83>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:84>
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_4 = (BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304*)il2cpp_codegen_object_new(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_il2cpp_TypeInfo_var);
+		BestTimeData__ctor_m8C6B0D4CDE72DB25408224370D7BAE165CB36D73(L_4, NULL);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_5 = L_4;
+		int32_t L_6 = __this->___minutes;
+		NullCheck(L_5);
+		L_5->___minutes = L_6;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_7 = L_5;
+		int32_t L_8 = __this->___seconds;
+		NullCheck(L_7);
+		L_7->___seconds = L_8;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_9 = L_7;
+		int32_t L_10 = __this->___milliseconds;
+		NullCheck(L_9);
+		L_9->___milliseconds = L_10;
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_11 = L_9;
+		float L_12 = __this->___time;
+		NullCheck(L_11);
+		L_11->___totalTime = L_12;
+		__this->___bestTimeData = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeData), (void*)L_11);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:86>
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_13 = __this->___bestTimeData;
+		String_t* L_14;
+		L_14 = JsonUtility_ToJson_m53A1FEE0D388CF3A629E093C04B5E1A6D5463B53(L_13, (bool)1, NULL);
+		V_0 = L_14;
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:87>
+		String_t* L_15 = __this->___bestTimeFilePath;
+		String_t* L_16 = V_0;
+		File_WriteAllText_m8AE8932A417928EF1E86F1E6B37C7A41904614D1(L_15, L_16, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:88>
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_17 = __this->___bestTimeData;
+		NullCheck(L_17);
+		int32_t L_18 = L_17->___minutes;
+		int32_t L_19 = L_18;
+		RuntimeObject* L_20 = Box(il2cpp_defaults.int32_class, &L_19);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_21 = __this->___bestTimeData;
+		NullCheck(L_21);
+		int32_t L_22 = L_21->___seconds;
+		int32_t L_23 = L_22;
+		RuntimeObject* L_24 = Box(il2cpp_defaults.int32_class, &L_23);
+		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_25 = __this->___bestTimeData;
+		NullCheck(L_25);
+		int32_t L_26 = L_25->___milliseconds;
+		int32_t L_27 = L_26;
+		RuntimeObject* L_28 = Box(il2cpp_defaults.int32_class, &L_27);
+		String_t* L_29;
+		L_29 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral1B0306F4566AC3EBF64E9DA8CEEEDE5926E962FE, L_20, L_24, L_28, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_29, NULL);
+	}
+
+IL_00b1:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:90>
+		return;
+	}
+}
+// Method Definition Index: 129306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer__ctor_m5FF13F1DAD0527F97E229A1904A8AD662731C4B5 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:13>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:24>
 		__this->___timerRunning = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -3619,7 +4013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer__ctor_m5FF13F1DAD0527F97E229A1904A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129298
+// Method Definition Index: 129307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3635,7 +4029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A90
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129299
+// Method Definition Index: 129308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3651,41 +4045,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129300
+// Method Definition Index: 129309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____597AA92DA5E02E9207AABF35DFD0848535FCB37DCB0492A3AA0E7C8831DAD4C5_FieldInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____CC58E40A6DF2984D7806B1BD9B2B2E49A39C2AB7ED6B5F2425B9D8430DC3DFFC_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____24321B41C2EC28C4C3698B0D1AEF4D97C456ECE4671F8CB7C65A395A025A9156_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____3B3304C7A21C329451A548F1ACD452D1DF18BFB5770BD405C0B5407F82565DD5_FieldInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E));
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)195));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)236));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____CC58E40A6DF2984D7806B1BD9B2B2E49A39C2AB7ED6B5F2425B9D8430DC3DFFC_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____24321B41C2EC28C4C3698B0D1AEF4D97C456ECE4671F8CB7C65A395A025A9156_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
 		(&V_0)->___FilePathsData = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)106));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)144));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____597AA92DA5E02E9207AABF35DFD0848535FCB37DCB0492A3AA0E7C8831DAD4C5_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____3B3304C7A21C329451A548F1ACD452D1DF18BFB5770BD405C0B5407F82565DD5_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
 		(&V_0)->___TypesData = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
-		(&V_0)->___TotalFiles = 5;
-		(&V_0)->___TotalTypes = 6;
+		(&V_0)->___TotalFiles = 6;
+		(&V_0)->___TotalTypes = 8;
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E L_6 = V_0;
 		return L_6;
 	}
 }
-// Method Definition Index: 129301
+// Method Definition Index: 129310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3790,7 +4184,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_ma
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 66597
+// Method Definition Index: 66600
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -3816,7 +4210,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 66593
+// Method Definition Index: 66596
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_down_mF62B2AE7C5AC31EAC9CB62797C7190C90A7A8599_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3830,7 +4224,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 66600
+// Method Definition Index: 66603
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -3853,7 +4247,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 66556
+// Method Definition Index: 66559
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -3866,7 +4260,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 66578
+// Method Definition Index: 66581
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3903,7 +4297,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8
 		return ((float)L_17);
 	}
 }
-// Method Definition Index: 28138
+// Method Definition Index: 28141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseInteractor_get_hasSelection_m8BC5C4AF35F35DDD0785F3B66243FA381B0726D6_inline (XRBaseInteractor_t4AF6FC9A7611B9417B4A43E11704AFF85B4A0FB4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3912,7 +4306,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRBaseInteractor_get_hasSele
 		return L_0;
 	}
 }
-// Method Definition Index: 28095
+// Method Definition Index: 28098
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* XRBaseInteractor_get_interactionManager_mA6F1E77002ABCE1149D1BFD0346F815F558D2CAF_inline (XRBaseInteractor_t4AF6FC9A7611B9417B4A43E11704AFF85B4A0FB4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3921,7 +4315,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRInteractionManager_t93C7F7F0CFE
 		return L_0;
 	}
 }
-// Method Definition Index: 28136
+// Method Definition Index: 28139
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XRBaseInteractor_get_firstInteractableSelected_mDFB6B871AA974FFF21287F4E40552F12999B11D1_inline (XRBaseInteractor_t4AF6FC9A7611B9417B4A43E11704AFF85B4A0FB4* __this, const RuntimeMethod* method) 
 {
 	{
