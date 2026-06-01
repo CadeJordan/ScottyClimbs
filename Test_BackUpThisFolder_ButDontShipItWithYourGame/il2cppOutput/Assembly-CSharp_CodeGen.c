@@ -9,6 +9,7 @@
 
 extern void ObstacleSpawner_Update_m3266463E77433CD430E2B948372FABBC4E652D0B (void);
 extern void ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879095 (void);
+extern void ObstacleSpawner_GetEdge_m1C5209BB60DD42A917EFDFC19FD180B03746B206 (void);
 extern void ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94 (void);
 extern void ClimbingObstacle_Start_mB5C1E3FA3AA2FD793D72F5BBF26BB03E4A6D7247 (void);
 extern void ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4 (void);
@@ -23,14 +24,24 @@ extern void U3CDisableGripU3Ed__9_MoveNext_m5AE801516FFB3BCB1786E4DD7A1BA494AAD3
 extern void U3CDisableGripU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB32BE2D0B4A4149117326673F4313CE5356964D (void);
 extern void U3CDisableGripU3Ed__9_System_Collections_IEnumerator_Reset_m081D37229D57F661E4AEEFA5135D993538EDC82A (void);
 extern void U3CDisableGripU3Ed__9_System_Collections_IEnumerator_get_Current_m16B224EB5978D323B6EE70433E5DA5E57D98C048 (void);
+extern void StartGameScript_Start_m59BABC6D8AF73273B3AAAAEC086A9C01116393CC (void);
+extern void StartGameScript_OnEnable_m1B742E1D88C1CF1FCFC280FF08C4179857C3F8B6 (void);
+extern void StartGameScript_OnDisable_mDEB81C99A8033607EDFFEFEE9BB4C1A363FD6994 (void);
+extern void StartGameScript_Update_mB7A8E9D2FBA75D2A19F5CA03226F68C3D2677B83 (void);
+extern void StartGameScript_OnButtonPress_m92BE09CB813974975CD0E45B9A80F06A26D2A407 (void);
+extern void StartGameScript__ctor_m1B5763567738892E49446C7720C1DFBB22B09E03 (void);
+extern void Timer_Start_m6820D211A06B2E5E24795D7EBE67EE865F39BC43 (void);
+extern void Timer_Update_m3AC30EFD54E8E1010F6E601AE179212E71E6B2CD (void);
+extern void Timer__ctor_m5FF13F1DAD0527F97E229A1904A8AD662731C4B5 (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[20] = 
+static Il2CppMethodPointer s_methodPointers[30] = 
 {
 	ObstacleSpawner_Update_m3266463E77433CD430E2B948372FABBC4E652D0B,
 	ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879095,
+	ObstacleSpawner_GetEdge_m1C5209BB60DD42A917EFDFC19FD180B03746B206,
 	ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94,
 	ClimbingObstacle_Start_mB5C1E3FA3AA2FD793D72F5BBF26BB03E4A6D7247,
 	ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4,
@@ -45,15 +56,25 @@ static Il2CppMethodPointer s_methodPointers[20] =
 	U3CDisableGripU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB32BE2D0B4A4149117326673F4313CE5356964D,
 	U3CDisableGripU3Ed__9_System_Collections_IEnumerator_Reset_m081D37229D57F661E4AEEFA5135D993538EDC82A,
 	U3CDisableGripU3Ed__9_System_Collections_IEnumerator_get_Current_m16B224EB5978D323B6EE70433E5DA5E57D98C048,
+	StartGameScript_Start_m59BABC6D8AF73273B3AAAAEC086A9C01116393CC,
+	StartGameScript_OnEnable_m1B742E1D88C1CF1FCFC280FF08C4179857C3F8B6,
+	StartGameScript_OnDisable_mDEB81C99A8033607EDFFEFEE9BB4C1A363FD6994,
+	StartGameScript_Update_mB7A8E9D2FBA75D2A19F5CA03226F68C3D2677B83,
+	StartGameScript_OnButtonPress_m92BE09CB813974975CD0E45B9A80F06A26D2A407,
+	StartGameScript__ctor_m1B5763567738892E49446C7720C1DFBB22B09E03,
+	Timer_Start_m6820D211A06B2E5E24795D7EBE67EE865F39BC43,
+	Timer_Update_m3AC30EFD54E8E1010F6E601AE179212E71E6B2CD,
+	Timer__ctor_m5FF13F1DAD0527F97E229A1904A8AD662731C4B5,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[20] = 
+static const int32_t s_InvokerIndices[30] = 
 {
 	21071,
 	21071,
+	21060,
 	21071,
 	21071,
 	21071,
@@ -70,14 +91,23 @@ static const int32_t s_InvokerIndices[20] =
 	20826,
 	21071,
 	21071,
-	34528,
+	21071,
+	21071,
+	16519,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
+	21071,
+	34529,
 	21071,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	20,
+	30,
 	s_methodPointers,
 	0,
 	NULL,

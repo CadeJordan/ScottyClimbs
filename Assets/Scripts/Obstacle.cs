@@ -43,7 +43,7 @@ public class ClimbingObstacle : MonoBehaviour
             StartCoroutine(DisableGrip(hitHand, gripDisableDuration));
 
         // Briefly stagger the other hand
-        // StartCoroutine(DisableGrip(otherHand, gripDisableDuration * 0.5f));
+        StartCoroutine(DisableGrip(otherHand, gripDisableDuration * 0.5f));
 
         TriggerHaptics(hitHand);
         Destroy(gameObject);

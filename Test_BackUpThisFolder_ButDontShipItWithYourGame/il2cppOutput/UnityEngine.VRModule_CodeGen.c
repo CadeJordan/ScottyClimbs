@@ -11,6 +11,8 @@ extern void EmbeddedAttribute__ctor_mC4E2441B11B749FF6C9D3F1F0498F0D58AD7A314 (v
 extern void RefSafetyRulesAttribute__ctor_mA2B447CB26FC6C13C924A8B6388779D6F29FC357 (void);
 extern void XRSettings_get_enabled_mC22ABF5BF7D835DAB861A1FA384DBB8904D15E70 (void);
 extern void XRSettings_get_isDeviceActive_m0C8A5F7EC76EF392020137915E4DD8E75EBDD6B8 (void);
+extern void XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694 (void);
+extern void XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8 (void);
 extern void XRSettings_get_eyeTextureResolutionScale_m335B9DB51528FCA7534FCD6828796395D63ADA90 (void);
 extern void XRSettings_set_eyeTextureResolutionScale_m92F1029D68F387D9B0C2DB35DFAB2FD82C64A30B (void);
 extern void XRSettings_get_eyeTextureWidth_m3B18AF3F3382398E2A818B2B01AA1FE90FEB3AAF (void);
@@ -25,12 +27,14 @@ extern void XRSettings_get_supportedDevices_m9ABC69D1044484DF7ED2B236AFCCD8BF107
 extern void XRSettings_get_eyeTextureDesc_Injected_m2B01F9A50CE1E88530044A5D342C1AE151BA17B5 (void);
 extern void XRSettings_get_loadedDeviceName_Injected_mFC2246F4C766B02173926CAD75142172713EB70C (void);
 extern void XRDevice_InvokeDeviceLoaded_mBE2198DE44A72E2F5059566C46B9907D82782790 (void);
-static Il2CppMethodPointer s_methodPointers[18] = 
+static Il2CppMethodPointer s_methodPointers[20] = 
 {
 	EmbeddedAttribute__ctor_mC4E2441B11B749FF6C9D3F1F0498F0D58AD7A314,
 	RefSafetyRulesAttribute__ctor_mA2B447CB26FC6C13C924A8B6388779D6F29FC357,
 	XRSettings_get_enabled_mC22ABF5BF7D835DAB861A1FA384DBB8904D15E70,
 	XRSettings_get_isDeviceActive_m0C8A5F7EC76EF392020137915E4DD8E75EBDD6B8,
+	XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694,
+	XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8,
 	XRSettings_get_eyeTextureResolutionScale_m335B9DB51528FCA7534FCD6828796395D63ADA90,
 	XRSettings_set_eyeTextureResolutionScale_m92F1029D68F387D9B0C2DB35DFAB2FD82C64A30B,
 	XRSettings_get_eyeTextureWidth_m3B18AF3F3382398E2A818B2B01AA1FE90FEB3AAF,
@@ -46,32 +50,34 @@ static Il2CppMethodPointer s_methodPointers[18] =
 	XRSettings_get_loadedDeviceName_Injected_mFC2246F4C766B02173926CAD75142172713EB70C,
 	XRDevice_InvokeDeviceLoaded_mBE2198DE44A72E2F5059566C46B9907D82782790,
 };
-static const int32_t s_InvokerIndices[18] = 
+static const int32_t s_InvokerIndices[20] = 
 {
 	21071,
 	16015,
-	34315,
-	34315,
-	34436,
-	33073,
-	34354,
-	34354,
-	34424,
-	34436,
-	33073,
-	34436,
-	33073,
-	34378,
-	34378,
-	33042,
-	33042,
-	33059,
+	34316,
+	34316,
+	34316,
+	33044,
+	34437,
+	33074,
+	34355,
+	34355,
+	34425,
+	34437,
+	33074,
+	34437,
+	33074,
+	34379,
+	34379,
+	33043,
+	33043,
+	33060,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule = 
 {
 	"UnityEngine.VRModule.dll",
-	18,
+	20,
 	s_methodPointers,
 	0,
 	NULL,
