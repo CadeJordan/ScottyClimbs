@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "XRI Default Input Actions",
     "maps": [
         {
@@ -3395,6 +3396,54 @@
                     "action": "Spawn Object",
                     "isComposite": false,
                     "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "ScottyClimbs",
+            "id": "3cb9f2b9-e21f-4c5d-8e93-7f75ffb89e00",
+            "actions": [
+                {
+                    "name": "ButtonPressA",
+                    "type": "Button",
+                    "id": "a7f45b1e-fa36-43d0-86e9-5f6093bd7281",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightTriggerPress",
+                    "type": "Value",
+                    "id": "b3116988-1599-44b6-a093-b569d2f10510",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d16fbe5c-a77e-470f-a639-3804dfe398d5",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonPressA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d44b93c-202e-403e-a28d-ef38fabd799c",
+                    "path": "<XRController>{RightHand}/{Trigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightTriggerPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

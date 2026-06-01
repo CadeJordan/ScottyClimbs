@@ -27,15 +27,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-extern void AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836 (void);
-extern void AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532 (void);
-extern void AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708 (void);
-extern void AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8 (void);
-extern void AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C (void);
-extern void AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE (void);
-extern void AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C (void);
-extern void AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4 (void);
-static Il2CppMethodPointer s_methodPointers[28] = 
+static Il2CppMethodPointer s_methodPointers[20] = 
 {
 	ObstacleSpawner_Update_m3266463E77433CD430E2B948372FABBC4E652D0B,
 	ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879095,
@@ -57,16 +49,8 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
-	AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836,
-	AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532,
-	AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708,
-	AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8,
-	AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C,
-	AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE,
-	AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C,
-	AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4,
 };
-static const int32_t s_InvokerIndices[28] = 
+static const int32_t s_InvokerIndices[20] = 
 {
 	21071,
 	21071,
@@ -88,20 +72,12 @@ static const int32_t s_InvokerIndices[28] =
 	21071,
 	34528,
 	21071,
-	21071,
-	21071,
-	21071,
-	21071,
-	21071,
-	21071,
-	21071,
-	21071,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	28,
+	20,
 	s_methodPointers,
 	0,
 	NULL,
