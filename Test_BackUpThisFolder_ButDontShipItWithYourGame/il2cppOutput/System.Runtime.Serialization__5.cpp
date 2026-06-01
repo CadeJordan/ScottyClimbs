@@ -23259,7 +23259,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XmlDictionaryString_t989B6E9A1B69
 		return L_0;
 	}
 }
-// Method Definition Index: 125739
+// Method Definition Index: 125737
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TracePayload_get_AppDomainFriendlyName_m18791F4CB0175663FEC376B6EDA277D18BF7598B_inline (TracePayload_tE02ECC54B0C02E553831FED02B312C936B6E895E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23267,7 +23267,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TracePayload_get_AppDom
 		return L_0;
 	}
 }
-// Method Definition Index: 125846
+// Method Definition Index: 125844
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR EtwProvider_t495DB39F5FD87760F9D80BE57C296AB6800EC479* EtwDiagnosticTrace_get_EtwProvider_m4B5C655F05480AF9AB98D17DED52AA93D9F95EA8_inline (EtwDiagnosticTrace_tEFDE4312A3FC41DC8621DE4A3781FECB10355454* __this, const RuntimeMethod* method) 
 {
 	{

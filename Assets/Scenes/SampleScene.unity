@@ -8697,6 +8697,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067403482}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1091157341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7921259990484736592, guid: 20448f50d45eeda408a97e8eb78a6d47, type: 3}
+  m_PrefabInstance: {fileID: 1964602097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1091157343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091157341}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 2, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1099318657
 GameObject:
   m_ObjectHideFlags: 0
@@ -9068,6 +9094,7 @@ GameObject:
   - component: {fileID: 487324550}
   - component: {fileID: 1115231312}
   - component: {fileID: 1115231311}
+  - component: {fileID: 1115231313}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -9112,6 +9139,7 @@ MonoBehaviour:
   seconds: 0
   milliseconds: 0
   timer: {fileID: 1441454337}
+  targetTrigger: {fileID: 1091157343}
 --- !u!114 &1115231312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9129,6 +9157,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!65 &1115231313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115231309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4, y: 0.1, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1124445189
 GameObject:
   m_ObjectHideFlags: 0
@@ -14886,7 +14935,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7921259990484736592, guid: 20448f50d45eeda408a97e8eb78a6d47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1091157343}
   m_SourcePrefab: {fileID: 100100000, guid: 20448f50d45eeda408a97e8eb78a6d47, type: 3}
 --- !u!1 &1984768632
 GameObject:
