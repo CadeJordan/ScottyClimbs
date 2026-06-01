@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7995497868466590050, guid: c5240644e1df8364aa4cea385c7cf092, type: 3}
       propertyPath: m_Name
-      value: Peach Variant
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -117,7 +117,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.20271091
+  m_Radius: 0.5
   m_Center: {x: 0.041552186, y: 0.19728622, z: -0.00000010430813}
 --- !u!114 &5866863601566205075
 MonoBehaviour:

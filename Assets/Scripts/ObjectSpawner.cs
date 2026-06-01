@@ -38,7 +38,8 @@ public class ObstacleSpawner : MonoBehaviour
 
     Vector3 GetEdge()
     {
-        int edge = Random.Range(0,4);
+        // int edge = Random.Range(0,4);
+        int edge = 0;
 
         switch (edge)
         {

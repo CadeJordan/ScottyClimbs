@@ -31,13 +31,13 @@ public class ClimbingObstacle : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Player")) return;
-
+        Debug.Log("[CS135] Player Collision");
         Vector3 hitPoint = collision.contacts[0].point;
 
         XRDirectInteractor hitHand = GetCloserHand(hitPoint);
         XRDirectInteractor otherHand =
             (hitHand == leftHandInteractor) ? rightHandInteractor : leftHandInteractor;
-
+        Debug.Log($"[CS135]", hitHand);
         // Disable the hit hand's grip
         if (hitHand != null)
             StartCoroutine(DisableGrip(hitHand, gripDisableDuration));
@@ -61,9 +61,16 @@ public class ClimbingObstacle : MonoBehaviour
 
     System.Collections.IEnumerator DisableGrip(XRDirectInteractor hand, float duration)
     {
+        if (hand.hasSelection)
+        {
+            hand.interactionManager.SelectExit((IXRSelectInteractor)hand, hand.firstInteractableSelected);
+        }
+
         hand.enabled = false;
+        Debug.Log("[CS135] Grib Disabled");
         yield return new WaitForSeconds(duration);
         hand.enabled = true;
+        Debug.Log("[CS135] Grib Enabled");
     }
 
     void TriggerHaptics(XRDirectInteractor hand)
