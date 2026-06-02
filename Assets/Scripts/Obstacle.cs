@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
-using static UnityEngine.XR.Interaction.Toolkit.XRInteractionManager;
 
 public class ClimbingObstacle : MonoBehaviour
 {
@@ -15,14 +15,34 @@ public class ClimbingObstacle : MonoBehaviour
     {
         leftInteractor = GameObject.FindWithTag("LEFTINTER");
         rightInteractor = GameObject.FindWithTag("RIGHTINTER");
-        interactionManager = GameObject.FindWithTag("INTERMANAGER");
+        GameObject managerObj = GameObject.FindWithTag("INTERMANAGER");
+        if (managerObj != null)
+            interactionManager = managerObj.GetComponent<XRInteractionManager>();
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Player")) return;
         Debug.Log("[CS135] Player Collision");
-        interactionManager.CancelInteractorSelection((IXRSelectInteractor)interactor);
+        
+        // Force the user to let go of both grips
+        if (interactionManager != null)
+        {
+            if (leftInteractor != null)
+            {
+                var leftInteractorComp = leftInteractor.GetComponent<IXRSelectInteractor>();
+                if (leftInteractorComp != null)
+                    interactionManager.CancelInteractorSelection(leftInteractorComp);
+            }
+            
+            if (rightInteractor != null)
+            {
+                var rightInteractorComp = rightInteractor.GetComponent<IXRSelectInteractor>();
+                if (rightInteractorComp != null)
+                    interactionManager.CancelInteractorSelection(rightInteractorComp);
+            }
+        }
+        
         Destroy(gameObject);
     }
 }
