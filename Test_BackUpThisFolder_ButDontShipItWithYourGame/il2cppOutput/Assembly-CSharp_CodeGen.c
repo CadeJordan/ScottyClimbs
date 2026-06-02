@@ -15,25 +15,8 @@ extern void ObstacleSpawner_SpawnObstacle_m0FF18D55361FB8664DB6E582342CE6E55F879
 extern void ObstacleSpawner_GetEdge_m1C5209BB60DD42A917EFDFC19FD180B03746B206 (void);
 extern void ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94 (void);
 extern void ClimbingObstacle_Start_mB5C1E3FA3AA2FD793D72F5BBF26BB03E4A6D7247 (void);
-extern void ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4 (void);
 extern void ClimbingObstacle_OnCollisionEnter_mBF26C785C9227D56E6163304DE9604451362B7C5 (void);
-extern void ClimbingObstacle_GetCloserHand_mD66FE02064A140F701E300577A9F7A24D28856A3 (void);
-extern void ClimbingObstacle_DisableGrip_mB88ED7AAF6808382BCAB787B19D18BA66BB1A7EE (void);
-extern void ClimbingObstacle_DisableHandholds_mAC168227BCF1196BEE761D6CF104F92B156863DF (void);
-extern void ClimbingObstacle_TriggerHaptics_mCEE7944BE09DE337647677BF0E3DD518A03BE181 (void);
 extern void ClimbingObstacle__ctor_mF3E3300D10817D83427E2B3F92E33C037F3CFA40 (void);
-extern void U3CDisableGripU3Ed__10__ctor_mDD093D16200FC7E9B925569198A34E0500823DD1 (void);
-extern void U3CDisableGripU3Ed__10_System_IDisposable_Dispose_m52BBDECAD22C61A4AE9D027BEA4B629E7CE14A6D (void);
-extern void U3CDisableGripU3Ed__10_MoveNext_m44B6A38FA78D95872E7D5BC4E873035579DD86B9 (void);
-extern void U3CDisableGripU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m12C32F732FF4375ECB65E2AE6BDC661D0851475C (void);
-extern void U3CDisableGripU3Ed__10_System_Collections_IEnumerator_Reset_m78F355A19A9CF96F92153E61B2059FC05371C758 (void);
-extern void U3CDisableGripU3Ed__10_System_Collections_IEnumerator_get_Current_m5C62BDF7D0828B041EF9AF68095A47537BA65DB1 (void);
-extern void U3CDisableHandholdsU3Ed__11__ctor_m609D8AB53E2B0BE37DBBDA0786CFF820D9779C6E (void);
-extern void U3CDisableHandholdsU3Ed__11_System_IDisposable_Dispose_m5FDB1AB0159B1A4DDEA37F647078EE1867E0226A (void);
-extern void U3CDisableHandholdsU3Ed__11_MoveNext_mAF971276FD395F945B8485B872BF10720FF5E9C9 (void);
-extern void U3CDisableHandholdsU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCDB9377FCF38F779BBD03533312198505FD66EF0 (void);
-extern void U3CDisableHandholdsU3Ed__11_System_Collections_IEnumerator_Reset_mC39247617F5D1ABE8896EF6ED162A778B6035720 (void);
-extern void U3CDisableHandholdsU3Ed__11_System_Collections_IEnumerator_get_Current_mBED64F75E4805825D53361AFCA2F1B6630ABF168 (void);
 extern void StartGameScript_Start_m59BABC6D8AF73273B3AAAAEC086A9C01116393CC (void);
 extern void StartGameScript_OnEnable_m1B742E1D88C1CF1FCFC280FF08C4179857C3F8B6 (void);
 extern void StartGameScript_OnDisable_mDEB81C99A8033607EDFFEFEE9BB4C1A363FD6994 (void);
@@ -51,7 +34,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[44] = 
+static Il2CppMethodPointer s_methodPointers[27] = 
 {
 	BestTimeSetter_Start_m8A52B82FC9480320DF0431030CAC41CDC8C40D2F,
 	BestTimeSetter_LoadAndDisplayBestTime_mF78B47A9C2962A9ECD6BC524F61E57779B0B3742,
@@ -61,25 +44,8 @@ static Il2CppMethodPointer s_methodPointers[44] =
 	ObstacleSpawner_GetEdge_m1C5209BB60DD42A917EFDFC19FD180B03746B206,
 	ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94,
 	ClimbingObstacle_Start_mB5C1E3FA3AA2FD793D72F5BBF26BB03E4A6D7247,
-	ClimbingObstacle_FindHandInteractors_m731D709F330574009DBDFD900A8CF30149B6AFB4,
 	ClimbingObstacle_OnCollisionEnter_mBF26C785C9227D56E6163304DE9604451362B7C5,
-	ClimbingObstacle_GetCloserHand_mD66FE02064A140F701E300577A9F7A24D28856A3,
-	ClimbingObstacle_DisableGrip_mB88ED7AAF6808382BCAB787B19D18BA66BB1A7EE,
-	ClimbingObstacle_DisableHandholds_mAC168227BCF1196BEE761D6CF104F92B156863DF,
-	ClimbingObstacle_TriggerHaptics_mCEE7944BE09DE337647677BF0E3DD518A03BE181,
 	ClimbingObstacle__ctor_mF3E3300D10817D83427E2B3F92E33C037F3CFA40,
-	U3CDisableGripU3Ed__10__ctor_mDD093D16200FC7E9B925569198A34E0500823DD1,
-	U3CDisableGripU3Ed__10_System_IDisposable_Dispose_m52BBDECAD22C61A4AE9D027BEA4B629E7CE14A6D,
-	U3CDisableGripU3Ed__10_MoveNext_m44B6A38FA78D95872E7D5BC4E873035579DD86B9,
-	U3CDisableGripU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m12C32F732FF4375ECB65E2AE6BDC661D0851475C,
-	U3CDisableGripU3Ed__10_System_Collections_IEnumerator_Reset_m78F355A19A9CF96F92153E61B2059FC05371C758,
-	U3CDisableGripU3Ed__10_System_Collections_IEnumerator_get_Current_m5C62BDF7D0828B041EF9AF68095A47537BA65DB1,
-	U3CDisableHandholdsU3Ed__11__ctor_m609D8AB53E2B0BE37DBBDA0786CFF820D9779C6E,
-	U3CDisableHandholdsU3Ed__11_System_IDisposable_Dispose_m5FDB1AB0159B1A4DDEA37F647078EE1867E0226A,
-	U3CDisableHandholdsU3Ed__11_MoveNext_mAF971276FD395F945B8485B872BF10720FF5E9C9,
-	U3CDisableHandholdsU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCDB9377FCF38F779BBD03533312198505FD66EF0,
-	U3CDisableHandholdsU3Ed__11_System_Collections_IEnumerator_Reset_mC39247617F5D1ABE8896EF6ED162A778B6035720,
-	U3CDisableHandholdsU3Ed__11_System_Collections_IEnumerator_get_Current_mBED64F75E4805825D53361AFCA2F1B6630ABF168,
 	StartGameScript_Start_m59BABC6D8AF73273B3AAAAEC086A9C01116393CC,
 	StartGameScript_OnEnable_m1B742E1D88C1CF1FCFC280FF08C4179857C3F8B6,
 	StartGameScript_OnDisable_mDEB81C99A8033607EDFFEFEE9BB4C1A363FD6994,
@@ -98,58 +64,41 @@ static Il2CppMethodPointer s_methodPointers[44] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[44] = 
+static const int32_t s_InvokerIndices[27] = 
 {
-	21071,
-	21071,
-	21071,
-	21071,
-	21071,
-	21060,
-	21071,
-	21071,
-	21071,
-	16108,
-	14035,
-	6319,
-	14023,
-	16108,
-	21071,
-	16015,
-	21071,
-	20571,
-	20826,
-	21071,
-	20826,
-	16015,
-	21071,
-	20571,
-	20826,
-	21071,
-	20826,
-	21071,
-	21071,
-	21071,
-	21071,
-	16519,
-	21071,
-	21071,
-	21071,
-	21071,
-	16108,
-	21071,
-	21071,
-	21071,
-	21071,
-	21071,
-	34529,
-	21071,
+	21070,
+	21070,
+	21070,
+	21070,
+	21070,
+	21059,
+	21070,
+	21070,
+	16107,
+	21070,
+	21070,
+	21070,
+	21070,
+	21070,
+	16518,
+	21070,
+	21070,
+	21070,
+	21070,
+	16107,
+	21070,
+	21070,
+	21070,
+	21070,
+	21070,
+	34528,
+	21070,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	44,
+	27,
 	s_methodPointers,
 	0,
 	NULL,

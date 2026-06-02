@@ -31762,7 +31762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVROverlayCanvas__cctor_mA52CFA3C2F5535D
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 128997
+// Method Definition Index: 129000
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31778,7 +31778,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRGeneralSettings_t8F8D096944606B
 		return L_0;
 	}
 }
-// Method Definition Index: 128998
+// Method Definition Index: 129001
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline (XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31787,7 +31787,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRManagerSettings_t7923B66EB3FEE5
 		return L_0;
 	}
 }
-// Method Definition Index: 129041
+// Method Definition Index: 129044
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRLoader_t80B1B1934C40561C5352ABC95D567DC2A7C9C976* XRManagerSettings_get_activeLoader_mFB3B679005792D3DF871EAA7120DD86DCA1D5DEA_inline (XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31985,7 +31985,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t OVRRuntimeSettings_get_Ha
 		return L_0;
 	}
 }
-// Method Definition Index: 112216
+// Method Definition Index: 112219
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool OpenXRSettings_get_optimizeBufferDiscards_mB7D92B8E0DDBE1A865248EF120E607747371EB68_inline (OpenXRSettings_tC785370EE9F65516FED2B31400BF71DC84F94B55* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31994,7 +31994,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool OpenXRSettings_get_optimizeB
 		return L_0;
 	}
 }
-// Method Definition Index: 112222
+// Method Definition Index: 112225
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool OpenXRSettings_get_symmetricProjection_mA30C281EEBB2AABFD15F2D5ED3D102399AEC5132_inline (OpenXRSettings_tC785370EE9F65516FED2B31400BF71DC84F94B55* __this, const RuntimeMethod* method) 
 {
 	{
@@ -32147,7 +32147,7 @@ IL_0006:
 		return L_3;
 	}
 }
-// Method Definition Index: 74745
+// Method Definition Index: 74748
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UniversalRenderPipelineAsset_get_msaaSampleCount_m108F21C692543BFAADED8F4033C1894D6FA8DEC8_inline (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, const RuntimeMethod* method) 
 {
 	{
@@ -32156,7 +32156,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UniversalRenderPipelineAs
 		return L_0;
 	}
 }
-// Method Definition Index: 74746
+// Method Definition Index: 74749
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UniversalRenderPipelineAsset_set_msaaSampleCount_m75E16D4FA9F886C35E0B03A536A415B22CB9F532_inline (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -33847,7 +33847,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mBF7DDBCD230
 	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 103363
+// Method Definition Index: 103366
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m139A176CD271A0532D75BE08DA7831C8C45CE28F_gshared_inline (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) 
 {
 	{

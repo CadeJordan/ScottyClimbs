@@ -368,7 +368,7 @@ inline void Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline (Ac
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129147
+// Method Definition Index: 129150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_mC4E2441B11B749FF6C9D3F1F0498F0D58AD7A314 (EmbeddedAttribute_tE07E2D930F8BE18D21C544C5CF57D44B8A4599D8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -384,7 +384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_mC4E2441B11B749F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129148
+// Method Definition Index: 129151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_mA2B447CB26FC6C13C924A8B6388779D6F29FC357 (RefSafetyRulesAttribute_tCC0936A0B3C6DA6AFF82305213E6CE4E6E99413D* __this, int32_t ___0_p, const RuntimeMethod* method) 
 {
 	{
@@ -402,7 +402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RefSafetyRulesAttribute__ctor_mA2B447CB2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129149
+// Method Definition Index: 129152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSettings_get_enabled_mC22ABF5BF7D835DAB861A1FA384DBB8904D15E70 (const RuntimeMethod* method) 
 {
 	typedef bool (*XRSettings_get_enabled_mC22ABF5BF7D835DAB861A1FA384DBB8904D15E70_ftn) ();
@@ -412,7 +412,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSettings_get_enabled_mC22ABF5BF7D835DA
 	bool icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129150
+// Method Definition Index: 129153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSettings_get_isDeviceActive_m0C8A5F7EC76EF392020137915E4DD8E75EBDD6B8 (const RuntimeMethod* method) 
 {
 	typedef bool (*XRSettings_get_isDeviceActive_m0C8A5F7EC76EF392020137915E4DD8E75EBDD6B8_ftn) ();
@@ -422,7 +422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSettings_get_isDeviceActive_m0C8A5F7EC
 	bool icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129151
+// Method Definition Index: 129154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694 (const RuntimeMethod* method) 
 {
 	typedef bool (*XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694_ftn) ();
@@ -432,7 +432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSettings_get_showDeviceView_m19D1D18E4
 	bool icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129152
+// Method Definition Index: 129155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8 (bool ___0_value, const RuntimeMethod* method) 
 {
 	typedef void (*XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8_ftn) (bool);
@@ -441,7 +441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_showDeviceView_m308871D42
 	_il2cpp_icall_func = (XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRSettings::set_showDeviceView(System.Boolean)");
 	_il2cpp_icall_func(___0_value);
 }
-// Method Definition Index: 129153
+// Method Definition Index: 129156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRSettings_get_eyeTextureResolutionScale_m335B9DB51528FCA7534FCD6828796395D63ADA90 (const RuntimeMethod* method) 
 {
 	typedef float (*XRSettings_get_eyeTextureResolutionScale_m335B9DB51528FCA7534FCD6828796395D63ADA90_ftn) ();
@@ -451,7 +451,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRSettings_get_eyeTextureResolutionScal
 	float icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129154
+// Method Definition Index: 129157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_eyeTextureResolutionScale_m92F1029D68F387D9B0C2DB35DFAB2FD82C64A30B (float ___0_value, const RuntimeMethod* method) 
 {
 	typedef void (*XRSettings_set_eyeTextureResolutionScale_m92F1029D68F387D9B0C2DB35DFAB2FD82C64A30B_ftn) (float);
@@ -460,7 +460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_eyeTextureResolutionScale
 	_il2cpp_icall_func = (XRSettings_set_eyeTextureResolutionScale_m92F1029D68F387D9B0C2DB35DFAB2FD82C64A30B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRSettings::set_eyeTextureResolutionScale(System.Single)");
 	_il2cpp_icall_func(___0_value);
 }
-// Method Definition Index: 129155
+// Method Definition Index: 129158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSettings_get_eyeTextureWidth_m3B18AF3F3382398E2A818B2B01AA1FE90FEB3AAF (const RuntimeMethod* method) 
 {
 	typedef int32_t (*XRSettings_get_eyeTextureWidth_m3B18AF3F3382398E2A818B2B01AA1FE90FEB3AAF_ftn) ();
@@ -470,7 +470,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSettings_get_eyeTextureWidth_m3B18A
 	int32_t icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129156
+// Method Definition Index: 129159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSettings_get_eyeTextureHeight_mCF4B2EC6851A8B8A8C4E6FC085A621B3166DB67A (const RuntimeMethod* method) 
 {
 	typedef int32_t (*XRSettings_get_eyeTextureHeight_mCF4B2EC6851A8B8A8C4E6FC085A621B3166DB67A_ftn) ();
@@ -480,7 +480,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSettings_get_eyeTextureHeight_mCF4B
 	int32_t icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129157
+// Method Definition Index: 129160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTextureDescriptor_t69845881CE6437E4E61F92074F2F84079F23FA46 XRSettings_get_eyeTextureDesc_mFBE8F6D5D5A23E4DE1BCCD994ADFAB4FB11D7A19 (const RuntimeMethod* method) 
 {
 	RenderTextureDescriptor_t69845881CE6437E4E61F92074F2F84079F23FA46 V_0;
@@ -491,7 +491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTextureDescriptor_t69845881CE6437E4E61F
 		return L_0;
 	}
 }
-// Method Definition Index: 129158
+// Method Definition Index: 129161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRSettings_get_renderViewportScale_mB35A32F5FE6B2EEE0CEF95ADFC04F171B6E5F5D1 (const RuntimeMethod* method) 
 {
 	{
@@ -500,7 +500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRSettings_get_renderViewportScale_mB35
 		return L_0;
 	}
 }
-// Method Definition Index: 129159
+// Method Definition Index: 129162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_renderViewportScale_m96E308EEAE4B92F92ACD2866E3958070FA3E5313 (float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -532,7 +532,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 129160
+// Method Definition Index: 129163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRSettings_get_renderViewportScaleInternal_mC9FFB83588F0865E76B78FB334AE6AAF0FF2EC24 (const RuntimeMethod* method) 
 {
 	typedef float (*XRSettings_get_renderViewportScaleInternal_mC9FFB83588F0865E76B78FB334AE6AAF0FF2EC24_ftn) ();
@@ -542,7 +542,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRSettings_get_renderViewportScaleInter
 	float icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129161
+// Method Definition Index: 129164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_renderViewportScaleInternal_m938F25CB6C2F43493823E5C00A9A42EC721110B3 (float ___0_value, const RuntimeMethod* method) 
 {
 	typedef void (*XRSettings_set_renderViewportScaleInternal_m938F25CB6C2F43493823E5C00A9A42EC721110B3_ftn) (float);
@@ -551,7 +551,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_renderViewportScaleIntern
 	_il2cpp_icall_func = (XRSettings_set_renderViewportScaleInternal_m938F25CB6C2F43493823E5C00A9A42EC721110B3_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRSettings::set_renderViewportScaleInternal(System.Single)");
 	_il2cpp_icall_func(___0_value);
 }
-// Method Definition Index: 129162
+// Method Definition Index: 129165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XRSettings_get_loadedDeviceName_mAEB3908916B98A9E8CF2FD8754B5AAB096245243 (const RuntimeMethod* method) 
 {
 	ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E V_0;
@@ -587,7 +587,7 @@ IL_0011:
 		return L_2;
 	}
 }
-// Method Definition Index: 129163
+// Method Definition Index: 129166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* XRSettings_get_supportedDevices_m9ABC69D1044484DF7ED2B236AFCCD8BF107BB74C (const RuntimeMethod* method) 
 {
 	typedef StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* (*XRSettings_get_supportedDevices_m9ABC69D1044484DF7ED2B236AFCCD8BF107BB74C_ftn) ();
@@ -597,7 +597,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
-// Method Definition Index: 129164
+// Method Definition Index: 129167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_get_eyeTextureDesc_Injected_m2B01F9A50CE1E88530044A5D342C1AE151BA17B5 (RenderTextureDescriptor_t69845881CE6437E4E61F92074F2F84079F23FA46* ___0_ret, const RuntimeMethod* method) 
 {
 	typedef void (*XRSettings_get_eyeTextureDesc_Injected_m2B01F9A50CE1E88530044A5D342C1AE151BA17B5_ftn) (RenderTextureDescriptor_t69845881CE6437E4E61F92074F2F84079F23FA46*);
@@ -606,7 +606,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_get_eyeTextureDesc_Injected_m
 	_il2cpp_icall_func = (XRSettings_get_eyeTextureDesc_Injected_m2B01F9A50CE1E88530044A5D342C1AE151BA17B5_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRSettings::get_eyeTextureDesc_Injected(UnityEngine.RenderTextureDescriptor&)");
 	_il2cpp_icall_func(___0_ret);
 }
-// Method Definition Index: 129165
+// Method Definition Index: 129168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_get_loadedDeviceName_Injected_mFC2246F4C766B02173926CAD75142172713EB70C (ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E* ___0_ret, const RuntimeMethod* method) 
 {
 	typedef void (*XRSettings_get_loadedDeviceName_Injected_mFC2246F4C766B02173926CAD75142172713EB70C_ftn) (ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E*);
@@ -623,7 +623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_get_loadedDeviceName_Injected
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129166
+// Method Definition Index: 129169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDevice_InvokeDeviceLoaded_mBE2198DE44A72E2F5059566C46B9907D82782790 (String_t* ___0_loadedDeviceName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
