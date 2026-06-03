@@ -13746,6 +13746,7 @@ struct Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20  : public MonoBehaviour_t
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___timer;
 	Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___targetTrigger;
 	bool ___timerRunning;
+	InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* ___buttonPressReference;
 	String_t* ___bestTimeFilePath;
 	BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* ___bestTimeData;
 };
@@ -18588,9 +18589,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16688[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16689[4] = 
 {
 	static_cast<int32_t>(offsetof(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304, ___minutes)),static_cast<int32_t>(offsetof(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304, ___seconds)),static_cast<int32_t>(offsetof(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304, ___milliseconds)),static_cast<int32_t>(offsetof(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304, ___totalTime)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16690[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16690[10] = 
 {
-	static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___time)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___minutes)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___seconds)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___milliseconds)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___timer)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___targetTrigger)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___timerRunning)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___bestTimeFilePath)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___bestTimeData)),};
+	static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___time)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___minutes)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___seconds)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___milliseconds)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___timer)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___targetTrigger)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___timerRunning)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___buttonPressReference)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___bestTimeFilePath)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___bestTimeData)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16691[4] = 
 {
 	static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___heading)),static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___text)),static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___linkText)),static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___url)),};

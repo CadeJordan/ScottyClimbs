@@ -3,6 +3,8 @@ using Time = UnityEngine.Time;
 using TMPro;
 using System;
 using System.IO;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class BestTimeData
@@ -13,6 +15,8 @@ public class BestTimeData
     public float totalTime;
 }
 
+
+
 public class Timer : MonoBehaviour
 {
     public float time = 0;
@@ -22,6 +26,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timer;
     public Collider targetTrigger;
     private bool timerRunning = true;
+    public InputActionReference buttonPressReference;
     
     private string bestTimeFilePath;
     private BestTimeData bestTimeData;
@@ -31,6 +36,22 @@ public class Timer : MonoBehaviour
     {
         bestTimeFilePath = Application.persistentDataPath + "/bestTime.json";
         LoadBestTime();
+    }
+
+    private void OnEnable()
+    {
+        if (buttonPressReference != null && buttonPressReference.action != null)
+        {
+            buttonPressReference.action.performed += OnButtonPress;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (buttonPressReference != null && buttonPressReference.action != null)
+        {
+            buttonPressReference.action.performed -= OnButtonPress;
+        }
     }
 
     // Update is called once per frame
@@ -87,5 +108,11 @@ public class Timer : MonoBehaviour
             File.WriteAllText(bestTimeFilePath, json);
             Debug.Log($"New best time saved: {bestTimeData.minutes:00}:{bestTimeData.seconds:00}:{bestTimeData.milliseconds:000}");
         }
+    }
+
+    private void OnButtonPress(InputAction.CallbackContext callback)
+    {
+        SceneManager.LoadScene("SampleScene");
+        this.enabled = false;
     }
 }

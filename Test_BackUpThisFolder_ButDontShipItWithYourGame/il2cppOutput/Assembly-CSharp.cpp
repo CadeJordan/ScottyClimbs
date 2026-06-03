@@ -235,6 +235,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisXRInteractionMan
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* StartGameScript_OnButtonPress_m92BE09CB813974975CD0E45B9A80F06A26D2A407_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Timer_OnButtonPress_m4DD33B4B308F288391D3729BF491708963141D22_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -1336,6 +1337,7 @@ struct Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20  : public MonoBehaviour_t
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___timer;
 	Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___targetTrigger;
 	bool ___timerRunning;
+	InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* ___buttonPressReference;
 	String_t* ___bestTimeFilePath;
 	BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* ___bestTimeData;
 };
@@ -2912,7 +2914,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Start_m6820D211A06B2E5E24795D7EBE6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:32>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:37>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		String_t* L_0;
 		L_0 = Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399(NULL);
@@ -2920,13 +2922,113 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Start_m6820D211A06B2E5E24795D7EBE6
 		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_0, _stringLiteral240B25E58FAA792B05766813F6A3446858BCEEDE, NULL);
 		__this->___bestTimeFilePath = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeFilePath), (void*)L_1);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:33>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:38>
 		Timer_LoadBestTime_mA095A498758C62633740214C95C642E6251F40BD(__this, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:34>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:39>
 		return;
 	}
 }
 // Method Definition Index: 129384
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnEnable_m8D6A1454A133DFFEDEFC76E1486DD87FD47F0F0F (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Timer_OnButtonPress_m4DD33B4B308F288391D3729BF491708963141D22_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:43>
+		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_0 = __this->___buttonPressReference;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_2 = __this->___buttonPressReference;
+		NullCheck(L_2);
+		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_3;
+		L_3 = InputActionReference_get_action_m395EDEA6A93B54555D22323FDA6E1B1E931CE6EF(L_2, NULL);
+		if (!L_3)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:45>
+		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_4 = __this->___buttonPressReference;
+		NullCheck(L_4);
+		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_5;
+		L_5 = InputActionReference_get_action_m395EDEA6A93B54555D22323FDA6E1B1E931CE6EF(L_4, NULL);
+		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_6 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
+		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_6, __this, (intptr_t)((void*)Timer_OnButtonPress_m4DD33B4B308F288391D3729BF491708963141D22_RuntimeMethod_var), NULL);
+		NullCheck(L_5);
+		InputAction_add_performed_m0337FFA16EBEF7AE365C3B558CFDFF7BB9747B54(L_5, L_6, NULL);
+	}
+
+IL_0037:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:47>
+		return;
+	}
+}
+// Method Definition Index: 129385
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnDisable_m7D9D8BB7CCAC1F6973F023CE109AD2CB2A05B484 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Timer_OnButtonPress_m4DD33B4B308F288391D3729BF491708963141D22_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:51>
+		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_0 = __this->___buttonPressReference;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_2 = __this->___buttonPressReference;
+		NullCheck(L_2);
+		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_3;
+		L_3 = InputActionReference_get_action_m395EDEA6A93B54555D22323FDA6E1B1E931CE6EF(L_2, NULL);
+		if (!L_3)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:53>
+		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_4 = __this->___buttonPressReference;
+		NullCheck(L_4);
+		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_5;
+		L_5 = InputActionReference_get_action_m395EDEA6A93B54555D22323FDA6E1B1E931CE6EF(L_4, NULL);
+		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_6 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
+		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_6, __this, (intptr_t)((void*)Timer_OnButtonPress_m4DD33B4B308F288391D3729BF491708963141D22_RuntimeMethod_var), NULL);
+		NullCheck(L_5);
+		InputAction_remove_performed_m1BE84CED38F11F17C825FA782B35C92D708E6E44(L_5, L_6, NULL);
+	}
+
+IL_0037:
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:55>
+		return;
+	}
+}
+// Method Definition Index: 129386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE179212E71E6B2CD (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2937,7 +3039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:39>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:60>
 		bool L_0 = __this->___timerRunning;
 		if (!L_0)
 		{
@@ -2945,25 +3047,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE1
 		}
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:41>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:62>
 		float L_1 = __this->___time;
 		float L_2;
 		L_2 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___time = ((float)il2cpp_codegen_add(L_1, L_2));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:42>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:63>
 		float L_3 = __this->___time;
 		__this->___minutes = il2cpp_codegen_cast_double_to_int<int32_t>(((float)(L_3/(60.0f))));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:43>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:64>
 		float L_4 = __this->___time;
 		__this->___seconds = il2cpp_codegen_cast_double_to_int<int32_t>((fmodf(L_4, (60.0f))));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:44>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:65>
 		float L_5 = __this->___time;
 		float L_6 = __this->___time;
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		double L_7;
 		L_7 = floor(((double)L_6));
 		__this->___milliseconds = il2cpp_codegen_cast_double_to_int<int32_t>(((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract(((double)L_5), L_7)), (1000.0))));
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:45>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:66>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_8 = __this->___timer;
 		int32_t L_9 = __this->___minutes;
 		int32_t L_10 = L_9;
@@ -2982,11 +3084,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE1
 
 IL_009e:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:47>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:68>
 		return;
 	}
 }
-// Method Definition Index: 129385
+// Method Definition Index: 129387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnTriggerEnter_m51FFA5AF7B08012AAEF3B5D487BA3D5F4AB207D0 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* ___0_collision, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2996,7 +3098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnTriggerEnter_m51FFA5AF7B08012AAE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:52>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:73>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_collision;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_1 = __this->___targetTrigger;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -3008,19 +3110,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnTriggerEnter_m51FFA5AF7B08012AAE
 		}
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:54>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:75>
 		__this->___timerRunning = (bool)0;
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:55>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:76>
 		Timer_SaveBestTime_m3003C2BDBBF22DD4C550FEC434A56CBFB62E6F97(__this, NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:57>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:78>
 		return;
 	}
 }
-// Method Definition Index: 129386
+// Method Definition Index: 129388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_LoadBestTime_mA095A498758C62633740214C95C642E6251F40BD (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3035,7 +3137,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_LoadBestTime_mA095A498758C62633740
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:61>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:82>
 		String_t* L_0 = __this->___bestTimeFilePath;
 		bool L_1;
 		L_1 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_0, NULL);
@@ -3045,18 +3147,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_LoadBestTime_mA095A498758C62633740
 		}
 	}
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:63>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:84>
 		String_t* L_2 = __this->___bestTimeFilePath;
 		String_t* L_3;
 		L_3 = File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA(L_2, NULL);
 		V_0 = L_3;
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:64>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:85>
 		String_t* L_4 = V_0;
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_5;
 		L_5 = JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A(L_4, JsonUtility_FromJson_TisBestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_m4F7FFAA65704B92EECB6D7D8E6CFF7617B55938A_RuntimeMethod_var);
 		__this->___bestTimeData = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeData), (void*)L_5);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:65>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:86>
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_6 = __this->___bestTimeData;
 		NullCheck(L_6);
 		int32_t L_7 = L_6->___minutes;
@@ -3081,7 +3183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_LoadBestTime_mA095A498758C62633740
 
 IL_0065:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:69>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:90>
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_19 = (BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304*)il2cpp_codegen_object_new(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_il2cpp_TypeInfo_var);
 		BestTimeData__ctor_m8C6B0D4CDE72DB25408224370D7BAE165CB36D73(L_19, NULL);
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_20 = L_19;
@@ -3098,14 +3200,14 @@ IL_0065:
 		L_23->___totalTime = ((std::numeric_limits<float>::max)());
 		__this->___bestTimeData = L_23;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeData), (void*)L_23);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:70>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:91>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE5D9EFAEE02F17A00C8DEDB8BBCD3FE2A5ECD695, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:72>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:93>
 		return;
 	}
 }
-// Method Definition Index: 129387
+// Method Definition Index: 129389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_SaveBestTime_m3003C2BDBBF22DD4C550FEC434A56CBFB62E6F97 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3118,7 +3220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_SaveBestTime_m3003C2BDBBF22DD4C550
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:76>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:97>
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_0 = __this->___bestTimeData;
 		if (!L_0)
 		{
@@ -3138,13 +3240,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_SaveBestTime_m3003C2BDBBF22DD4C550
 
 IL_001e:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:78>
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:79>
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:80>
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:81>
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:82>
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:83>
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:84>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:99>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:100>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:101>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:102>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:103>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:104>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:105>
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_4 = (BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304*)il2cpp_codegen_object_new(BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304_il2cpp_TypeInfo_var);
 		BestTimeData__ctor_m8C6B0D4CDE72DB25408224370D7BAE165CB36D73(L_4, NULL);
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_5 = L_4;
@@ -3165,16 +3267,16 @@ IL_001e:
 		L_11->___totalTime = L_12;
 		__this->___bestTimeData = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___bestTimeData), (void*)L_11);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:86>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:107>
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_13 = __this->___bestTimeData;
 		String_t* L_14;
 		L_14 = JsonUtility_ToJson_m53A1FEE0D388CF3A629E093C04B5E1A6D5463B53(L_13, (bool)1, NULL);
 		V_0 = L_14;
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:87>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:108>
 		String_t* L_15 = __this->___bestTimeFilePath;
 		String_t* L_16 = V_0;
 		File_WriteAllText_m8AE8932A417928EF1E86F1E6B37C7A41904614D1(L_15, L_16, NULL);
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:88>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:109>
 		BestTimeData_t47B511E73100E4ED9E710A3B7F0EF77BFCD1F304* L_17 = __this->___bestTimeData;
 		NullCheck(L_17);
 		int32_t L_18 = L_17->___minutes;
@@ -3198,15 +3300,35 @@ IL_001e:
 
 IL_00b1:
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:90>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:111>
 		return;
 	}
 }
-// Method Definition Index: 129388
+// Method Definition Index: 129390
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_OnButtonPress_m4DD33B4B308F288391D3729BF491708963141D22 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_callback, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDB4D83D6871102EE8099E4F8AF38EB3DFE88EB6B);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:115>
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteralDB4D83D6871102EE8099E4F8AF38EB3DFE88EB6B, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:116>
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:117>
+		return;
+	}
+}
+// Method Definition Index: 129391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer__ctor_m5FF13F1DAD0527F97E229A1904A8AD662731C4B5 (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:24>
+		//<source_info:/home/cs135-spring2026-021/CS135_Scotty_Climbs/Assets/Scripts/Timer.cs:28>
 		__this->___timerRunning = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -3220,7 +3342,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer__ctor_m5FF13F1DAD0527F97E229A1904A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129389
+// Method Definition Index: 129392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3236,7 +3358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A90
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129390
+// Method Definition Index: 129393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3252,7 +3374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 129391
+// Method Definition Index: 129394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3286,7 +3408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 129392
+// Method Definition Index: 129395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
