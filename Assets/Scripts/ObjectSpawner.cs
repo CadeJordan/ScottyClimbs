@@ -3,9 +3,9 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     public GameObject obstaclePrefab;
-    public float spawnInterval = 3f;
-    public float spawnRadiusX = 3f;
-    public float spawnRadiusZ = 3f;
+    public float spawnInterval = 0.5f;
+    public float spawnRadiusX = 2.6f;
+    public float spawnRadiusZ = 2.8f;
     public float spawnHeight = 0f;
     public float minFallSpeed = 2f;
     public float maxFallSpeed = 6f;
@@ -38,8 +38,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     Vector3 GetEdge()
     {
-        // int edge = Random.Range(0,4);
-        int edge = 0;
+        int edge = Random.Range(0,4);
 
         switch (edge)
         {

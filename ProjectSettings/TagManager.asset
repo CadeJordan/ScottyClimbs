@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - CLIMB
+  - LEFTINTER
+  - RIGHTINTER
+  - INTERMANAGER
   layers:
   - Default
   - TransparentFX

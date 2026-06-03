@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.Feedback;
 
 public class ClimbingObstacle : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ClimbingObstacle : MonoBehaviour
     public GameObject leftInteractor;
     public GameObject rightInteractor;
     public XRInteractionManager interactionManager;
+    private XRBaseInputInteractor leftHaptics;
+    private XRBaseInputInteractor rightHaptics;
     void Start()
     {
         leftInteractor = GameObject.FindWithTag("LEFTINTER");
@@ -18,6 +21,10 @@ public class ClimbingObstacle : MonoBehaviour
         GameObject managerObj = GameObject.FindWithTag("INTERMANAGER");
         if (managerObj != null)
             interactionManager = managerObj.GetComponent<XRInteractionManager>();
+        if (leftInteractor != null)
+            leftHaptics = leftInteractor.GetComponent<XRBaseInputInteractor>();
+        if (rightInteractor != null)
+            rightHaptics = rightInteractor.GetComponent<XRBaseInputInteractor>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -42,6 +49,9 @@ public class ClimbingObstacle : MonoBehaviour
                     interactionManager.CancelInteractorSelection(rightInteractorComp);
             }
         }
+
+        leftHaptics?.SendHapticImpulse(hapticIntensity, hapticDuration);
+        rightHaptics?.SendHapticImpulse(hapticIntensity, hapticDuration);
         
         Destroy(gameObject);
     }
