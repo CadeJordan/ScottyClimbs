@@ -308,7 +308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111194
+// Method Definition Index: 111205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualizeEnvRaycast_Awake_m39F0496D9C2CA72EDE0C5FFC0CB6DCBE7ED54D88 (VisualizeEnvRaycast_t19F4697EFAAC36480815B16C18D8930A2FA66DB0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -328,7 +328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualizeEnvRaycast_Awake_m39F0496D9C2CA
 		return;
 	}
 }
-// Method Definition Index: 111195
+// Method Definition Index: 111206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualizeEnvRaycast_Update_m4F486C9A63BF0C33B163FC04FA790BC393EFDE2C (VisualizeEnvRaycast_t19F4697EFAAC36480815B16C18D8930A2FA66DB0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -337,7 +337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualizeEnvRaycast_Update_m4F486C9A63BF
 		return;
 	}
 }
-// Method Definition Index: 111196
+// Method Definition Index: 111207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualizeEnvRaycast_VisualizeRay_mA8C70B2F5FB8902A5275E458CFB86CF675BB5626 (VisualizeEnvRaycast_t19F4697EFAAC36480815B16C18D8930A2FA66DB0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -478,7 +478,7 @@ IL_00c9:
 		return;
 	}
 }
-// Method Definition Index: 111197
+// Method Definition Index: 111208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualizeEnvRaycast__ctor_mCBB47F358EAE7E8EE5B7C25E7F2E8249186B929A (VisualizeEnvRaycast_t19F4697EFAAC36480815B16C18D8930A2FA66DB0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -521,7 +521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualizeEnvRaycast__ctor_mCBB47F358EAE7
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 64791
+// Method Definition Index: 64794
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Ray_get_origin_m97604A8F180316A410DCD77B7D74D04522FA1BA6_inline (Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* __this, const RuntimeMethod* method) 
 {
 	{
@@ -529,7 +529,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 66627
+// Method Definition Index: 66631
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_LookRotation_mDB2CCA75B8E1AB98104F2A6E1A1EA57D0D1298D7_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_forward, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -543,7 +543,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_1;
 	}
 }
-// Method Definition Index: 66591
+// Method Definition Index: 66595
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
